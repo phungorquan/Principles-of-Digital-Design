@@ -1,0 +1,698 @@
+Classic Timing Analyzer report for Register
+Fri Oct 26 22:31:40 2018
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. tpd
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                          ;
++------------------------------+-------+---------------+-------------+-----------------------------------+----------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From                              ; To                               ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+-----------------------------------+----------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 7.011 ns    ; ADD2[1]                           ; Block3:inst|Register:inst28|inst ; --         ; CLOCK    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 10.763 ns   ; Block3:inst|Register:inst26|inst3 ; Q2[3]                            ; CLOCK      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 13.948 ns   ; ADD2[1]                           ; Q2[3]                            ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.521 ns   ; ADD1[2]                           ; Block3:inst|Register:inst25|inst ; --         ; CLOCK    ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                                   ;                                  ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+-----------------------------------+----------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                 ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+-----------------------------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From    ; To                                ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+-----------------------------------+----------+
+; N/A                                     ; None                                                ; 7.011 ns   ; ADD2[1] ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 7.011 ns   ; ADD2[1] ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 7.011 ns   ; ADD2[1] ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 7.011 ns   ; ADD2[1] ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.723 ns   ; ADD2[0] ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.723 ns   ; ADD2[0] ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.723 ns   ; ADD2[0] ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.723 ns   ; ADD2[0] ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.711 ns   ; ADD2[1] ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.711 ns   ; ADD2[1] ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.711 ns   ; ADD2[1] ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.711 ns   ; ADD2[1] ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.686 ns   ; ADD2[0] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.686 ns   ; ADD2[0] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.686 ns   ; ADD2[0] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.686 ns   ; ADD2[0] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.664 ns   ; WE1     ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.664 ns   ; WE1     ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.664 ns   ; WE1     ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.664 ns   ; WE1     ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.654 ns   ; ADD2[0] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.654 ns   ; ADD2[0] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.654 ns   ; ADD2[0] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.637 ns   ; ADD2[2] ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.637 ns   ; ADD2[2] ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.637 ns   ; ADD2[2] ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.637 ns   ; ADD2[2] ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.627 ns   ; WE1     ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.627 ns   ; WE1     ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.627 ns   ; WE1     ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.627 ns   ; WE1     ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.595 ns   ; WE1     ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.595 ns   ; WE1     ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.595 ns   ; WE1     ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.456 ns   ; ADD2[1] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.456 ns   ; ADD2[1] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.456 ns   ; ADD2[1] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.456 ns   ; ADD2[1] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.406 ns   ; ADD2[0] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.406 ns   ; ADD2[0] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.406 ns   ; ADD2[0] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.347 ns   ; WE1     ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.347 ns   ; WE1     ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.347 ns   ; WE1     ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.298 ns   ; ADD2[2] ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.298 ns   ; ADD2[2] ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.298 ns   ; ADD2[2] ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.298 ns   ; ADD2[2] ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.231 ns   ; ADD1[1] ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.231 ns   ; ADD1[1] ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.231 ns   ; ADD1[1] ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.231 ns   ; ADD1[1] ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.185 ns   ; ADD2[1] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.185 ns   ; ADD2[1] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.185 ns   ; ADD2[1] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.173 ns   ; ADD1[0] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.173 ns   ; ADD1[0] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.173 ns   ; ADD1[0] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.173 ns   ; ADD2[1] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.173 ns   ; ADD2[1] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.173 ns   ; ADD2[1] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.173 ns   ; ADD2[1] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.154 ns   ; ADD1[1] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.154 ns   ; ADD1[1] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.154 ns   ; ADD1[1] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.154 ns   ; ADD1[1] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.109 ns   ; ADD2[0] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.104 ns   ; ADD1[0] ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.104 ns   ; ADD1[0] ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.104 ns   ; ADD1[0] ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.104 ns   ; ADD1[0] ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.078 ns   ; ADD2[2] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.078 ns   ; ADD2[2] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.078 ns   ; ADD2[2] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.066 ns   ; ADD2[2] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.066 ns   ; ADD2[2] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.066 ns   ; ADD2[2] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.066 ns   ; ADD2[2] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.050 ns   ; WE1     ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.043 ns   ; ADD2[2] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.043 ns   ; ADD2[2] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.043 ns   ; ADD2[2] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.043 ns   ; ADD2[2] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.010 ns   ; WE1     ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.010 ns   ; WE1     ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.010 ns   ; WE1     ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 6.010 ns   ; WE1     ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.930 ns   ; ADD2[0] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.921 ns   ; ADD1[0] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.921 ns   ; ADD1[0] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.921 ns   ; ADD1[0] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.915 ns   ; ADD2[1] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.915 ns   ; ADD2[1] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.915 ns   ; ADD2[1] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.910 ns   ; ADD1[0] ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.910 ns   ; ADD1[0] ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.910 ns   ; ADD1[0] ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.910 ns   ; ADD1[0] ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.900 ns   ; ADD2[0] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.900 ns   ; ADD2[0] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.900 ns   ; ADD2[0] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.900 ns   ; ADD2[0] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.881 ns   ; WE1     ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.881 ns   ; WE1     ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.881 ns   ; WE1     ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.881 ns   ; WE1     ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.881 ns   ; ADD1[1] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.881 ns   ; ADD1[1] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.881 ns   ; ADD1[1] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.881 ns   ; ADD1[1] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.871 ns   ; WE1     ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.865 ns   ; ADD1[0] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.865 ns   ; ADD1[0] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.865 ns   ; ADD1[0] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.865 ns   ; ADD1[0] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.833 ns   ; ADD1[0] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.833 ns   ; ADD1[0] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.833 ns   ; ADD1[0] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.833 ns   ; ADD1[0] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.819 ns   ; ADD2[2] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.819 ns   ; ADD2[2] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.819 ns   ; ADD2[2] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.814 ns   ; ADD1[1] ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.814 ns   ; ADD1[1] ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.814 ns   ; ADD1[1] ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.814 ns   ; ADD1[1] ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.804 ns   ; WE1     ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.804 ns   ; WE1     ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.804 ns   ; WE1     ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.804 ns   ; WE1     ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.794 ns   ; ADD1[0] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.794 ns   ; ADD1[0] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.794 ns   ; ADD1[0] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.794 ns   ; ADD1[0] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.770 ns   ; ADD1[1] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.770 ns   ; ADD1[1] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.770 ns   ; ADD1[1] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.624 ns   ; ADD1[0] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.618 ns   ; ADD2[1] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.596 ns   ; ADD2[0] ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.596 ns   ; ADD2[0] ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.596 ns   ; ADD2[0] ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.596 ns   ; ADD2[0] ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.530 ns   ; ADD1[1] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.530 ns   ; ADD1[1] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.530 ns   ; ADD1[1] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.530 ns   ; ADD1[1] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.522 ns   ; ADD2[0] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.522 ns   ; ADD2[0] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.522 ns   ; ADD2[0] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.522 ns   ; ADD2[0] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.522 ns   ; ADD2[2] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.497 ns   ; ADD1[1] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.497 ns   ; ADD1[1] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.497 ns   ; ADD1[1] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.461 ns   ; ADD2[1] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.449 ns   ; ADD1[0] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.386 ns   ; ADD2[1] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.386 ns   ; ADD2[1] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.386 ns   ; ADD2[1] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.386 ns   ; ADD2[1] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.354 ns   ; ADD2[2] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.280 ns   ; ADD2[2] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.280 ns   ; ADD2[2] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.280 ns   ; ADD2[2] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.280 ns   ; ADD2[2] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.200 ns   ; ADD1[1] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.135 ns   ; ADD2[0] ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.135 ns   ; ADD2[0] ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.135 ns   ; ADD2[0] ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.135 ns   ; ADD2[0] ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.071 ns   ; ADD2[1] ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.071 ns   ; ADD2[1] ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.071 ns   ; ADD2[1] ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.071 ns   ; ADD2[1] ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; 5.046 ns   ; ADD1[1] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.937 ns   ; WE1     ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.937 ns   ; WE1     ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.937 ns   ; WE1     ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.937 ns   ; WE1     ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.706 ns   ; ADD2[2] ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.706 ns   ; ADD2[2] ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.706 ns   ; ADD2[2] ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.706 ns   ; ADD2[2] ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.564 ns   ; IN[2]   ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.564 ns   ; IN[2]   ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.558 ns   ; IN[2]   ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.555 ns   ; IN[2]   ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.435 ns   ; IN[3]   ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.431 ns   ; IN[3]   ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.391 ns   ; IN[3]   ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.390 ns   ; IN[3]   ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.336 ns   ; IN[2]   ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.331 ns   ; IN[2]   ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.322 ns   ; IN[2]   ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.321 ns   ; IN[2]   ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.174 ns   ; IN[3]   ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.170 ns   ; IN[3]   ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.168 ns   ; IN[3]   ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; 4.167 ns   ; IN[3]   ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;         ;                                   ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+-----------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------+
+; tco                                                                                        ;
++-------+--------------+------------+-----------------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                              ; To    ; From Clock ;
++-------+--------------+------------+-----------------------------------+-------+------------+
+; N/A   ; None         ; 10.763 ns  ; Block3:inst|Register:inst26|inst3 ; Q2[3] ; CLOCK      ;
+; N/A   ; None         ; 10.646 ns  ; Block3:inst|Register:inst26|inst  ; Q2[0] ; CLOCK      ;
+; N/A   ; None         ; 10.534 ns  ; Block3:inst|Register:inst24|inst3 ; Q1[3] ; CLOCK      ;
+; N/A   ; None         ; 10.530 ns  ; Block3:inst|Register:inst24|inst  ; Q1[0] ; CLOCK      ;
+; N/A   ; None         ; 10.528 ns  ; Block3:inst|Register:inst26|inst1 ; Q2[1] ; CLOCK      ;
+; N/A   ; None         ; 10.317 ns  ; Block3:inst|Register:inst24|inst3 ; Q2[3] ; CLOCK      ;
+; N/A   ; None         ; 10.299 ns  ; Block3:inst|Register:inst|inst3   ; Q1[3] ; CLOCK      ;
+; N/A   ; None         ; 10.246 ns  ; Block3:inst|Register:inst|inst1   ; Q1[1] ; CLOCK      ;
+; N/A   ; None         ; 10.211 ns  ; Block3:inst|Register:inst24|inst  ; Q2[0] ; CLOCK      ;
+; N/A   ; None         ; 10.171 ns  ; Block3:inst|Register:inst27|inst3 ; Q1[3] ; CLOCK      ;
+; N/A   ; None         ; 10.138 ns  ; Block3:inst|Register:inst26|inst3 ; Q1[3] ; CLOCK      ;
+; N/A   ; None         ; 10.117 ns  ; Block3:inst|Register:inst27|inst1 ; Q1[1] ; CLOCK      ;
+; N/A   ; None         ; 10.091 ns  ; Block3:inst|Register:inst26|inst  ; Q1[0] ; CLOCK      ;
+; N/A   ; None         ; 10.065 ns  ; Block3:inst|Register:inst|inst    ; Q1[0] ; CLOCK      ;
+; N/A   ; None         ; 9.958 ns   ; Block3:inst|Register:inst28|inst1 ; Q2[1] ; CLOCK      ;
+; N/A   ; None         ; 9.956 ns   ; Block3:inst|Register:inst|inst2   ; Q1[2] ; CLOCK      ;
+; N/A   ; None         ; 9.934 ns   ; Block3:inst|Register:inst27|inst  ; Q1[0] ; CLOCK      ;
+; N/A   ; None         ; 9.915 ns   ; Block3:inst|Register:inst24|inst1 ; Q2[1] ; CLOCK      ;
+; N/A   ; None         ; 9.900 ns   ; Block3:inst|Register:inst27|inst1 ; Q2[1] ; CLOCK      ;
+; N/A   ; None         ; 9.896 ns   ; Block3:inst|Register:inst28|inst2 ; Q2[2] ; CLOCK      ;
+; N/A   ; None         ; 9.877 ns   ; Block3:inst|Register:inst27|inst3 ; Q2[3] ; CLOCK      ;
+; N/A   ; None         ; 9.775 ns   ; Block3:inst|Register:inst26|inst2 ; Q2[2] ; CLOCK      ;
+; N/A   ; None         ; 9.755 ns   ; Block3:inst|Register:inst27|inst  ; Q2[0] ; CLOCK      ;
+; N/A   ; None         ; 9.722 ns   ; Block3:inst|Register:inst27|inst2 ; Q2[2] ; CLOCK      ;
+; N/A   ; None         ; 9.648 ns   ; Block3:inst|Register:inst24|inst2 ; Q2[2] ; CLOCK      ;
+; N/A   ; None         ; 9.624 ns   ; Block3:inst|Register:inst|inst    ; Q2[0] ; CLOCK      ;
+; N/A   ; None         ; 9.594 ns   ; Block3:inst|Register:inst|inst1   ; Q2[1] ; CLOCK      ;
+; N/A   ; None         ; 9.560 ns   ; Block3:inst|Register:inst27|inst2 ; Q1[2] ; CLOCK      ;
+; N/A   ; None         ; 9.529 ns   ; Block3:inst|Register:inst24|inst1 ; Q1[1] ; CLOCK      ;
+; N/A   ; None         ; 9.475 ns   ; Block3:inst|Register:inst28|inst3 ; Q2[3] ; CLOCK      ;
+; N/A   ; None         ; 9.455 ns   ; Block3:inst|Register:inst29|inst3 ; Q1[3] ; CLOCK      ;
+; N/A   ; None         ; 9.444 ns   ; Block3:inst|Register:inst|inst3   ; Q2[3] ; CLOCK      ;
+; N/A   ; None         ; 9.395 ns   ; Block3:inst|Register:inst24|inst2 ; Q1[2] ; CLOCK      ;
+; N/A   ; None         ; 9.386 ns   ; Block3:inst|Register:inst29|inst2 ; Q1[2] ; CLOCK      ;
+; N/A   ; None         ; 9.333 ns   ; Block3:inst|Register:inst30|inst1 ; Q2[1] ; CLOCK      ;
+; N/A   ; None         ; 9.327 ns   ; Block3:inst|Register:inst25|inst3 ; Q1[3] ; CLOCK      ;
+; N/A   ; None         ; 9.285 ns   ; Block3:inst|Register:inst|inst2   ; Q2[2] ; CLOCK      ;
+; N/A   ; None         ; 9.268 ns   ; Block3:inst|Register:inst26|inst2 ; Q1[2] ; CLOCK      ;
+; N/A   ; None         ; 9.221 ns   ; Block3:inst|Register:inst29|inst  ; Q1[0] ; CLOCK      ;
+; N/A   ; None         ; 9.207 ns   ; Block3:inst|Register:inst28|inst  ; Q2[0] ; CLOCK      ;
+; N/A   ; None         ; 9.176 ns   ; Block3:inst|Register:inst29|inst1 ; Q1[1] ; CLOCK      ;
+; N/A   ; None         ; 9.143 ns   ; Block3:inst|Register:inst30|inst3 ; Q2[3] ; CLOCK      ;
+; N/A   ; None         ; 9.110 ns   ; Block3:inst|Register:inst30|inst3 ; Q1[3] ; CLOCK      ;
+; N/A   ; None         ; 9.092 ns   ; Block3:inst|Register:inst26|inst1 ; Q1[1] ; CLOCK      ;
+; N/A   ; None         ; 9.091 ns   ; Block3:inst|Register:inst25|inst  ; Q1[0] ; CLOCK      ;
+; N/A   ; None         ; 9.087 ns   ; Block3:inst|Register:inst30|inst  ; Q1[0] ; CLOCK      ;
+; N/A   ; None         ; 9.085 ns   ; Block3:inst|Register:inst25|inst1 ; Q2[1] ; CLOCK      ;
+; N/A   ; None         ; 9.074 ns   ; Block3:inst|Register:inst30|inst  ; Q2[0] ; CLOCK      ;
+; N/A   ; None         ; 9.067 ns   ; Block3:inst|Register:inst30|inst2 ; Q2[2] ; CLOCK      ;
+; N/A   ; None         ; 9.047 ns   ; Block3:inst|Register:inst25|inst1 ; Q1[1] ; CLOCK      ;
+; N/A   ; None         ; 8.982 ns   ; Block3:inst|Register:inst25|inst2 ; Q1[2] ; CLOCK      ;
+; N/A   ; None         ; 8.961 ns   ; Block3:inst|Register:inst28|inst  ; Q1[0] ; CLOCK      ;
+; N/A   ; None         ; 8.903 ns   ; Block3:inst|Register:inst25|inst3 ; Q2[3] ; CLOCK      ;
+; N/A   ; None         ; 8.893 ns   ; Block3:inst|Register:inst25|inst  ; Q2[0] ; CLOCK      ;
+; N/A   ; None         ; 8.846 ns   ; Block3:inst|Register:inst25|inst2 ; Q2[2] ; CLOCK      ;
+; N/A   ; None         ; 8.825 ns   ; Block3:inst|Register:inst30|inst2 ; Q1[2] ; CLOCK      ;
+; N/A   ; None         ; 8.763 ns   ; Block3:inst|Register:inst29|inst  ; Q2[0] ; CLOCK      ;
+; N/A   ; None         ; 8.710 ns   ; Block3:inst|Register:inst28|inst3 ; Q1[3] ; CLOCK      ;
+; N/A   ; None         ; 8.688 ns   ; Block3:inst|Register:inst29|inst1 ; Q2[1] ; CLOCK      ;
+; N/A   ; None         ; 8.590 ns   ; Block3:inst|Register:inst29|inst3 ; Q2[3] ; CLOCK      ;
+; N/A   ; None         ; 8.441 ns   ; Block3:inst|Register:inst29|inst2 ; Q2[2] ; CLOCK      ;
+; N/A   ; None         ; 8.387 ns   ; Block3:inst|Register:inst28|inst2 ; Q1[2] ; CLOCK      ;
+; N/A   ; None         ; 8.335 ns   ; Block3:inst|Register:inst30|inst1 ; Q1[1] ; CLOCK      ;
+; N/A   ; None         ; 8.203 ns   ; Block3:inst|Register:inst28|inst1 ; Q1[1] ; CLOCK      ;
++-------+--------------+------------+-----------------------------------+-------+------------+
+
+
++---------------------------------------------------------------+
+; tpd                                                           ;
++-------+-------------------+-----------------+---------+-------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From    ; To    ;
++-------+-------------------+-----------------+---------+-------+
+; N/A   ; None              ; 13.948 ns       ; ADD2[1] ; Q2[3] ;
+; N/A   ; None              ; 13.888 ns       ; ADD2[1] ; Q2[0] ;
+; N/A   ; None              ; 13.803 ns       ; ADD1[1] ; Q1[3] ;
+; N/A   ; None              ; 13.755 ns       ; ADD1[1] ; Q1[1] ;
+; N/A   ; None              ; 13.746 ns       ; ADD1[1] ; Q1[0] ;
+; N/A   ; None              ; 13.701 ns       ; ADD2[2] ; Q2[3] ;
+; N/A   ; None              ; 13.591 ns       ; ADD2[1] ; Q2[1] ;
+; N/A   ; None              ; 13.330 ns       ; ADD2[1] ; Q2[2] ;
+; N/A   ; None              ; 13.277 ns       ; ADD2[2] ; Q2[0] ;
+; N/A   ; None              ; 13.024 ns       ; ADD2[2] ; Q2[2] ;
+; N/A   ; None              ; 13.013 ns       ; ADD2[2] ; Q2[1] ;
+; N/A   ; None              ; 12.924 ns       ; ADD1[1] ; Q1[2] ;
+; N/A   ; None              ; 11.571 ns       ; ADD2[0] ; Q2[3] ;
+; N/A   ; None              ; 11.566 ns       ; ADD1[0] ; Q1[3] ;
+; N/A   ; None              ; 11.496 ns       ; ADD2[0] ; Q2[0] ;
+; N/A   ; None              ; 11.474 ns       ; ADD2[0] ; Q2[1] ;
+; N/A   ; None              ; 11.473 ns       ; ADD2[0] ; Q2[2] ;
+; N/A   ; None              ; 11.455 ns       ; ADD1[0] ; Q1[0] ;
+; N/A   ; None              ; 11.247 ns       ; ADD1[0] ; Q1[2] ;
+; N/A   ; None              ; 11.160 ns       ; ADD1[0] ; Q1[1] ;
+; N/A   ; None              ; 10.255 ns       ; ADD1[2] ; Q1[3] ;
+; N/A   ; None              ; 10.189 ns       ; ADD1[2] ; Q1[1] ;
+; N/A   ; None              ; 10.013 ns       ; ADD1[2] ; Q1[0] ;
+; N/A   ; None              ; 9.635 ns        ; ADD1[2] ; Q1[2] ;
++-------+-------------------+-----------------+---------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                 ;
++-----------------------------------------+-----------------------------------------------------+-----------+---------+-----------------------------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From    ; To                                ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+---------+-----------------------------------+----------+
+; N/A                                     ; None                                                ; -1.521 ns ; ADD1[2] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.521 ns ; ADD1[2] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.521 ns ; ADD1[2] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.521 ns ; ADD1[2] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.609 ns ; ADD1[2] ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.609 ns ; ADD1[2] ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.609 ns ; ADD1[2] ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.609 ns ; ADD1[2] ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.824 ns ; ADD1[2] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -1.999 ns ; ADD1[2] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.170 ns ; ADD1[2] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.170 ns ; ADD1[2] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.170 ns ; ADD1[2] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.170 ns ; ADD1[2] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.268 ns ; ADD1[2] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.268 ns ; ADD1[2] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.268 ns ; ADD1[2] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.268 ns ; ADD1[2] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.296 ns ; ADD1[2] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.296 ns ; ADD1[2] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.296 ns ; ADD1[2] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.480 ns ; ADD1[2] ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.480 ns ; ADD1[2] ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.480 ns ; ADD1[2] ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.480 ns ; ADD1[2] ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.548 ns ; ADD1[2] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.548 ns ; ADD1[2] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -2.548 ns ; ADD1[2] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.569 ns ; IN[1]   ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.569 ns ; IN[1]   ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.582 ns ; IN[1]   ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.582 ns ; IN[1]   ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.611 ns ; IN[0]   ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.612 ns ; IN[0]   ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.807 ns ; IN[0]   ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.810 ns ; IN[0]   ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.823 ns ; IN[0]   ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.825 ns ; IN[0]   ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.828 ns ; IN[0]   ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.830 ns ; IN[0]   ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.874 ns ; IN[1]   ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.875 ns ; IN[1]   ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.881 ns ; IN[1]   ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.882 ns ; IN[1]   ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.937 ns ; IN[3]   ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.938 ns ; IN[3]   ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.940 ns ; IN[3]   ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -3.944 ns ; IN[3]   ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.091 ns ; IN[2]   ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.092 ns ; IN[2]   ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.101 ns ; IN[2]   ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.106 ns ; IN[2]   ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.160 ns ; IN[3]   ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.161 ns ; IN[3]   ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.201 ns ; IN[3]   ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.205 ns ; IN[3]   ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.325 ns ; IN[2]   ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.328 ns ; IN[2]   ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.334 ns ; IN[2]   ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.334 ns ; IN[2]   ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.476 ns ; ADD2[2] ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.476 ns ; ADD2[2] ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.476 ns ; ADD2[2] ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.476 ns ; ADD2[2] ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.707 ns ; WE1     ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.707 ns ; WE1     ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.707 ns ; WE1     ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.707 ns ; WE1     ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.816 ns ; ADD1[1] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.841 ns ; ADD2[1] ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.841 ns ; ADD2[1] ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.841 ns ; ADD2[1] ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.841 ns ; ADD2[1] ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.905 ns ; ADD2[0] ; Block3:inst|Register:inst|inst3   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.905 ns ; ADD2[0] ; Block3:inst|Register:inst|inst2   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.905 ns ; ADD2[0] ; Block3:inst|Register:inst|inst1   ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.905 ns ; ADD2[0] ; Block3:inst|Register:inst|inst    ; CLOCK    ;
+; N/A                                     ; None                                                ; -4.970 ns ; ADD1[1] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.050 ns ; ADD2[2] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.050 ns ; ADD2[2] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.050 ns ; ADD2[2] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.050 ns ; ADD2[2] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.124 ns ; ADD2[2] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.156 ns ; ADD2[1] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.156 ns ; ADD2[1] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.156 ns ; ADD2[1] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.156 ns ; ADD2[1] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.219 ns ; ADD1[0] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.231 ns ; ADD2[1] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.267 ns ; ADD1[1] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.267 ns ; ADD1[1] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.267 ns ; ADD1[1] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.268 ns ; WE1     ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.268 ns ; WE1     ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.268 ns ; WE1     ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.268 ns ; WE1     ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.292 ns ; ADD2[0] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.292 ns ; ADD2[0] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.292 ns ; ADD2[0] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.292 ns ; ADD2[0] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.292 ns ; ADD2[2] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.300 ns ; ADD1[1] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.300 ns ; ADD1[1] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.300 ns ; ADD1[1] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.300 ns ; ADD1[1] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.314 ns ; WE1     ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.342 ns ; WE1     ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.342 ns ; WE1     ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.342 ns ; WE1     ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.342 ns ; WE1     ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.366 ns ; ADD2[0] ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.366 ns ; ADD2[0] ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.366 ns ; ADD2[0] ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.366 ns ; ADD2[0] ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.388 ns ; ADD2[1] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.394 ns ; ADD1[0] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.489 ns ; WE1     ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.540 ns ; ADD1[1] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.540 ns ; ADD1[1] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.540 ns ; ADD1[1] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.564 ns ; ADD1[0] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.564 ns ; ADD1[0] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.564 ns ; ADD1[0] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.564 ns ; ADD1[0] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.584 ns ; ADD1[1] ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.584 ns ; ADD1[1] ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.584 ns ; ADD1[1] ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.584 ns ; ADD1[1] ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.589 ns ; ADD2[2] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.589 ns ; ADD2[2] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.589 ns ; ADD2[2] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.603 ns ; ADD1[0] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.603 ns ; ADD1[0] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.603 ns ; ADD1[0] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.603 ns ; ADD1[0] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.635 ns ; ADD1[0] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.635 ns ; ADD1[0] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.635 ns ; ADD1[0] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.635 ns ; ADD1[0] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.646 ns ; WE1     ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.646 ns ; WE1     ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.646 ns ; WE1     ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.646 ns ; WE1     ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.651 ns ; ADD1[1] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.651 ns ; ADD1[1] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.651 ns ; ADD1[1] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.651 ns ; ADD1[1] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.661 ns ; WE1     ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.661 ns ; WE1     ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.661 ns ; WE1     ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.661 ns ; WE1     ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.670 ns ; ADD2[0] ; Block3:inst|Register:inst27|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.670 ns ; ADD2[0] ; Block3:inst|Register:inst27|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.670 ns ; ADD2[0] ; Block3:inst|Register:inst27|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.670 ns ; ADD2[0] ; Block3:inst|Register:inst27|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.680 ns ; ADD1[0] ; Block3:inst|Register:inst29|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.680 ns ; ADD1[0] ; Block3:inst|Register:inst29|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.680 ns ; ADD1[0] ; Block3:inst|Register:inst29|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.680 ns ; ADD1[0] ; Block3:inst|Register:inst29|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.685 ns ; ADD2[1] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.685 ns ; ADD2[1] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.685 ns ; ADD2[1] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.691 ns ; ADD1[0] ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.691 ns ; ADD1[0] ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.691 ns ; ADD1[0] ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.700 ns ; ADD2[0] ; Block3:inst|Register:inst26|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.786 ns ; WE1     ; Block3:inst|Register:inst24|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.786 ns ; WE1     ; Block3:inst|Register:inst24|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.786 ns ; WE1     ; Block3:inst|Register:inst24|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.813 ns ; ADD2[2] ; Block3:inst|Register:inst30|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.813 ns ; ADD2[2] ; Block3:inst|Register:inst30|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.813 ns ; ADD2[2] ; Block3:inst|Register:inst30|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.813 ns ; ADD2[2] ; Block3:inst|Register:inst30|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.836 ns ; ADD2[2] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.836 ns ; ADD2[2] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.836 ns ; ADD2[2] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.836 ns ; ADD2[2] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.848 ns ; ADD2[2] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.848 ns ; ADD2[2] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.848 ns ; ADD2[2] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.874 ns ; ADD1[0] ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.874 ns ; ADD1[0] ; Block3:inst|Register:inst28|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.874 ns ; ADD1[0] ; Block3:inst|Register:inst28|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.874 ns ; ADD1[0] ; Block3:inst|Register:inst28|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.879 ns ; ADD2[0] ; Block3:inst|Register:inst24|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.924 ns ; ADD1[1] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.924 ns ; ADD1[1] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.924 ns ; ADD1[1] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.924 ns ; ADD1[1] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.943 ns ; ADD1[0] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.943 ns ; ADD1[0] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.943 ns ; ADD1[0] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.943 ns ; ADD2[1] ; Block3:inst|Register:inst25|inst3 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.943 ns ; ADD2[1] ; Block3:inst|Register:inst25|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.943 ns ; ADD2[1] ; Block3:inst|Register:inst25|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.943 ns ; ADD2[1] ; Block3:inst|Register:inst25|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.955 ns ; ADD2[1] ; Block3:inst|Register:inst26|inst2 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.955 ns ; ADD2[1] ; Block3:inst|Register:inst26|inst1 ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.955 ns ; ADD2[1] ; Block3:inst|Register:inst26|inst  ; CLOCK    ;
+; N/A                                     ; None                                                ; -5.971 ns ; WE1     ; Block3:inst|Register:inst28|inst3 ; CLOCK    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;         ;                                   ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+---------+-----------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Oct 26 22:31:40 2018
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Register -c Register --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK" is an undefined clock
+Info: No valid register-to-register data paths exist for clock "CLOCK"
+Info: tsu for register "Block3:inst|Register:inst28|inst3" (data pin = "ADD2[1]", clock pin = "CLOCK") is 7.011 ns
+    Info: + Longest pin to register delay is 9.743 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_Y12; Fanout = 18; PIN Node = 'ADD2[1]'
+        Info: 2: + IC(5.734 ns) + CELL(0.378 ns) = 6.922 ns; Loc. = LCCOMB_X28_Y18_N0; Fanout = 1; COMB Node = 'Block3:inst|inst7~4'
+        Info: 3: + IC(0.713 ns) + CELL(0.415 ns) = 8.050 ns; Loc. = LCCOMB_X28_Y17_N30; Fanout = 4; COMB Node = 'Block3:inst|inst32~2'
+        Info: 4: + IC(1.033 ns) + CELL(0.660 ns) = 9.743 ns; Loc. = LCFF_X28_Y19_N25; Fanout = 2; REG Node = 'Block3:inst|Register:inst28|inst3'
+        Info: Total cell delay = 2.263 ns ( 23.23 % )
+        Info: Total interconnect delay = 7.480 ns ( 76.77 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "CLOCK" to destination register is 2.696 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'CLOCK'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 32; COMB Node = 'CLOCK~clkctrl'
+        Info: 3: + IC(1.042 ns) + CELL(0.537 ns) = 2.696 ns; Loc. = LCFF_X28_Y19_N25; Fanout = 2; REG Node = 'Block3:inst|Register:inst28|inst3'
+        Info: Total cell delay = 1.536 ns ( 56.97 % )
+        Info: Total interconnect delay = 1.160 ns ( 43.03 % )
+Info: tco from clock "CLOCK" to destination pin "Q2[3]" through register "Block3:inst|Register:inst26|inst3" is 10.763 ns
+    Info: + Longest clock path from clock "CLOCK" to source register is 2.694 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'CLOCK'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 32; COMB Node = 'CLOCK~clkctrl'
+        Info: 3: + IC(1.040 ns) + CELL(0.537 ns) = 2.694 ns; Loc. = LCFF_X28_Y17_N17; Fanout = 2; REG Node = 'Block3:inst|Register:inst26|inst3'
+        Info: Total cell delay = 1.536 ns ( 57.02 % )
+        Info: Total interconnect delay = 1.158 ns ( 42.98 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 7.819 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X28_Y17_N17; Fanout = 2; REG Node = 'Block3:inst|Register:inst26|inst3'
+        Info: 2: + IC(0.331 ns) + CELL(0.438 ns) = 0.769 ns; Loc. = LCCOMB_X28_Y17_N26; Fanout = 1; COMB Node = 'Block3:inst|mux81_4b:inst35|Mux0~0'
+        Info: 3: + IC(0.738 ns) + CELL(0.438 ns) = 1.945 ns; Loc. = LCCOMB_X28_Y19_N18; Fanout = 1; COMB Node = 'Block3:inst|mux81_4b:inst35|Mux0~1'
+        Info: 4: + IC(0.728 ns) + CELL(0.419 ns) = 3.092 ns; Loc. = LCCOMB_X28_Y18_N24; Fanout = 1; COMB Node = 'Block3:inst|mux81_4b:inst35|Mux0~4'
+        Info: 5: + IC(1.939 ns) + CELL(2.788 ns) = 7.819 ns; Loc. = PIN_V13; Fanout = 0; PIN Node = 'Q2[3]'
+        Info: Total cell delay = 4.083 ns ( 52.22 % )
+        Info: Total interconnect delay = 3.736 ns ( 47.78 % )
+Info: Longest tpd from source pin "ADD2[1]" to destination pin "Q2[3]" is 13.948 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_Y12; Fanout = 18; PIN Node = 'ADD2[1]'
+    Info: 2: + IC(5.668 ns) + CELL(0.420 ns) = 6.898 ns; Loc. = LCCOMB_X28_Y17_N26; Fanout = 1; COMB Node = 'Block3:inst|mux81_4b:inst35|Mux0~0'
+    Info: 3: + IC(0.738 ns) + CELL(0.438 ns) = 8.074 ns; Loc. = LCCOMB_X28_Y19_N18; Fanout = 1; COMB Node = 'Block3:inst|mux81_4b:inst35|Mux0~1'
+    Info: 4: + IC(0.728 ns) + CELL(0.419 ns) = 9.221 ns; Loc. = LCCOMB_X28_Y18_N24; Fanout = 1; COMB Node = 'Block3:inst|mux81_4b:inst35|Mux0~4'
+    Info: 5: + IC(1.939 ns) + CELL(2.788 ns) = 13.948 ns; Loc. = PIN_V13; Fanout = 0; PIN Node = 'Q2[3]'
+    Info: Total cell delay = 4.875 ns ( 34.95 % )
+    Info: Total interconnect delay = 9.073 ns ( 65.05 % )
+Info: th for register "Block3:inst|Register:inst25|inst3" (data pin = "ADD1[2]", clock pin = "CLOCK") is -1.521 ns
+    Info: + Longest clock path from clock "CLOCK" to destination register is 2.697 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'CLOCK'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 32; COMB Node = 'CLOCK~clkctrl'
+        Info: 3: + IC(1.043 ns) + CELL(0.537 ns) = 2.697 ns; Loc. = LCFF_X29_Y18_N25; Fanout = 2; REG Node = 'Block3:inst|Register:inst25|inst3'
+        Info: Total cell delay = 1.536 ns ( 56.95 % )
+        Info: Total interconnect delay = 1.161 ns ( 43.05 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 4.484 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 17; PIN Node = 'ADD1[2]'
+        Info: 2: + IC(1.939 ns) + CELL(0.275 ns) = 3.193 ns; Loc. = LCCOMB_X28_Y17_N0; Fanout = 4; COMB Node = 'Block3:inst|inst5~2'
+        Info: 3: + IC(0.631 ns) + CELL(0.660 ns) = 4.484 ns; Loc. = LCFF_X29_Y18_N25; Fanout = 2; REG Node = 'Block3:inst|Register:inst25|inst3'
+        Info: Total cell delay = 1.914 ns ( 42.69 % )
+        Info: Total interconnect delay = 2.570 ns ( 57.31 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 181 megabytes
+    Info: Processing ended: Fri Oct 26 22:31:40 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

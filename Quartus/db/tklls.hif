@@ -1,0 +1,42 @@
+Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+tklls
+# storage
+db|tklls.(0).cnf
+db|tklls.(0).cnf
+# case_insensitive
+# source_file
+tklls.bdf
+2e5031b6f44c55f291c7ac6d79773b24
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

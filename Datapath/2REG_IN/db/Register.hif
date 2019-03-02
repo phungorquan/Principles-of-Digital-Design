@@ -1,0 +1,982 @@
+Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+decoder38
+# storage
+db|Register.(1).cnf
+db|Register.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+decoder38.v
+9e425ad1c3e53b1b134c17d667f44aa
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block1:inst|Block3:REGISTERFILE|decoder38:inst31
+}
+# macro_sequence
+
+# end
+# entity
+merge
+# storage
+db|Register.(2).cnf
+db|Register.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+merge.v
+a95d9d58dc71cfece1b165c6e4969be
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block1:inst|ALU:inst|DEC:inst2|merge:inst5
+Block1:inst|ALU:inst|FA:inst|merge:inst5
+Block1:inst|ALU:inst|SUB:inst1|merge:inst5
+Block1:inst|Block3:REGISTERFILE|Register:inst|merge:inst20
+Block1:inst|Block3:REGISTERFILE|Register:inst25|merge:inst20
+Block1:inst|Block3:REGISTERFILE|Register:inst26|merge:inst20
+Block1:inst|Block3:REGISTERFILE|Register:inst27|merge:inst20
+Block1:inst|Block3:REGISTERFILE|Register:inst28|merge:inst20
+Block1:inst|Block3:REGISTERFILE|Register:inst29|merge:inst20
+Block1:inst|Block3:REGISTERFILE|Register:inst30|merge:inst20
+Block1:inst|Block3:REGISTERFILE|Register:inst36|merge:inst20
+}
+# macro_sequence
+
+# end
+# entity
+split
+# storage
+db|Register.(3).cnf
+db|Register.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+split.v
+6ee743872babd6dfa41fc8e36c5510bf
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block1:inst|ALU:inst|split:inst6
+Block1:inst|ALU:inst|DEC:inst2|split:inst4
+Block1:inst|ALU:inst|FA:inst|split:inst4
+Block1:inst|ALU:inst|FA:inst|split:inst6
+Block1:inst|ALU:inst|SUB:inst1|split:inst4
+Block1:inst|ALU:inst|SUB:inst1|split:inst6
+Block1:inst|Block3:REGISTERFILE|Register:inst|split:inst21
+Block1:inst|Block3:REGISTERFILE|Register:inst25|split:inst21
+Block1:inst|Block3:REGISTERFILE|Register:inst26|split:inst21
+Block1:inst|Block3:REGISTERFILE|Register:inst27|split:inst21
+Block1:inst|Block3:REGISTERFILE|Register:inst28|split:inst21
+Block1:inst|Block3:REGISTERFILE|Register:inst29|split:inst21
+Block1:inst|Block3:REGISTERFILE|Register:inst30|split:inst21
+Block1:inst|Block3:REGISTERFILE|Register:inst36|split:inst21
+}
+# macro_sequence
+
+# end
+# entity
+mux81_4b
+# storage
+db|Register.(6).cnf
+db|Register.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+mux81_4b.v
+10e0d49f1aa6868778231ff1b560
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1
+Block1:inst|Block3:REGISTERFILE|mux81_4b:inst35
+}
+# macro_sequence
+
+# end
+# entity
+Register
+# storage
+db|Register.(0).cnf
+db|Register.(0).cnf
+# case_insensitive
+# source_file
+Register.bdf
+527bdb53cc1497283d2cbe82c87e29b5
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block1:inst|Block3:REGISTERFILE|Register:inst
+Block1:inst|Block3:REGISTERFILE|Register:inst25
+Block1:inst|Block3:REGISTERFILE|Register:inst26
+Block1:inst|Block3:REGISTERFILE|Register:inst27
+Block1:inst|Block3:REGISTERFILE|Register:inst28
+Block1:inst|Block3:REGISTERFILE|Register:inst29
+Block1:inst|Block3:REGISTERFILE|Register:inst30
+Block1:inst|Block3:REGISTERFILE|Register:inst36
+}
+# macro_sequence
+
+# end
+# entity
+BUSMUX
+# storage
+db|Register.(7).cnf
+db|Register.(7).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|BUSMUX.tdf
+566d3d48c3e618e9164e94da1b6b97f5
+7
+# user_parameter {
+WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sel
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
+}
+# hierarchies {
+Block1:inst|ALU:inst|busmux:inst5
+Block1:inst|ALU:inst|busmux:inst3
+Block1:inst|busmux:SELECTOR
+}
+# macro_sequence
+
+# end
+# entity
+lpm_mux
+# storage
+db|Register.(8).cnf
+db|Register.(8).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|lpm_mux.tdf
+b0c05b84e9d41ffe33c6e6bd095a1
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+LPM_SIZE
+2
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHS
+1
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+mux_omc
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sel0
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+data1_3
+-1
+3
+data1_2
+-1
+3
+data1_1
+-1
+3
+data1_0
+-1
+3
+data0_3
+-1
+3
+data0_2
+-1
+3
+data0_1
+-1
+3
+data0_0
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|muxlut.inc
+f172666ca13e5e31e17e3f6cb35af52
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+}
+# hierarchies {
+Block1:inst|ALU:inst|busmux:inst5|lpm_mux:$00000
+Block1:inst|ALU:inst|busmux:inst3|lpm_mux:$00000
+Block1:inst|ALU:inst|busmux:inst4|lpm_mux:$00000
+Block1:inst|Block3:REGISTERFILE|busmux:inst2|lpm_mux:$00000
+Block1:inst|Block3:REGISTERFILE|busmux:inst3|lpm_mux:$00000
+Block1:inst|busmux:SELECTOR|lpm_mux:$00000
+}
+# macro_sequence
+
+# end
+# entity
+mux_omc
+# storage
+db|Register.(9).cnf
+db|Register.(9).cnf
+# case_insensitive
+# source_file
+db|mux_omc.tdf
+58b88e75f4bde55dde23c73f9d2a3ac8
+7
+# used_port {
+sel0
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+Block1:inst|ALU:inst|busmux:inst5|lpm_mux:$00000|mux_omc:auto_generated
+Block1:inst|ALU:inst|busmux:inst3|lpm_mux:$00000|mux_omc:auto_generated
+Block1:inst|ALU:inst|busmux:inst4|lpm_mux:$00000|mux_omc:auto_generated
+Block1:inst|Block3:REGISTERFILE|busmux:inst2|lpm_mux:$00000|mux_omc:auto_generated
+Block1:inst|Block3:REGISTERFILE|busmux:inst3|lpm_mux:$00000|mux_omc:auto_generated
+Block1:inst|busmux:SELECTOR|lpm_mux:$00000|mux_omc:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+BUSMUX
+# storage
+db|Register.(10).cnf
+db|Register.(10).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|BUSMUX.tdf
+566d3d48c3e618e9164e94da1b6b97f5
+7
+# user_parameter {
+WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sel
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
+}
+# macro_sequence
+
+# end
+# entity
+BUSMUX
+# storage
+db|Register.(5).cnf
+db|Register.(5).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|BUSMUX.tdf
+566d3d48c3e618e9164e94da1b6b97f5
+7
+# user_parameter {
+WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sel
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
+}
+# macro_sequence
+
+# end
+# entity
+BUSMUX
+# storage
+db|Register.(12).cnf
+db|Register.(12).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|BUSMUX.tdf
+566d3d48c3e618e9164e94da1b6b97f5
+7
+# user_parameter {
+WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sel
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+datab3
+-1
+1
+datab2
+-1
+1
+datab1
+-1
+1
+datab0
+-1
+1
+}
+# include_file {
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
+}
+# hierarchies {
+Block1:inst|ALU:inst|busmux:inst4
+}
+# macro_sequence
+
+# end
+# entity
+BUSMUX
+# storage
+db|Register.(13).cnf
+db|Register.(13).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|BUSMUX.tdf
+566d3d48c3e618e9164e94da1b6b97f5
+7
+# user_parameter {
+WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sel
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa3
+-1
+1
+dataa2
+-1
+1
+dataa1
+-1
+1
+dataa0
+-1
+1
+}
+# include_file {
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
+}
+# macro_sequence
+
+# end
+# entity
+BUSMUX
+# storage
+db|Register.(14).cnf
+db|Register.(14).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|BUSMUX.tdf
+566d3d48c3e618e9164e94da1b6b97f5
+7
+# user_parameter {
+WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sel
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa3
+-1
+1
+dataa2
+-1
+1
+dataa1
+-1
+1
+dataa0
+-1
+1
+}
+# include_file {
+..|..|..|..|..|..|..|quartus|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
+}
+# hierarchies {
+Block1:inst|Block3:REGISTERFILE|busmux:inst2
+Block1:inst|Block3:REGISTERFILE|busmux:inst3
+}
+# macro_sequence
+
+# end
+# entity
+Block3
+# storage
+db|Register.(11).cnf
+db|Register.(11).cnf
+# case_insensitive
+# source_file
+Block3.bdf
+1efc9245958d4cac472180122a1012
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block1:inst|Block3:REGISTERFILE
+}
+# macro_sequence
+
+# end
+# entity
+DEC
+# storage
+db|Register.(16).cnf
+db|Register.(16).cnf
+# case_insensitive
+# source_file
+DEC.bdf
+4c4964f4f59651f2a84271e73944dd3
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block1:inst|ALU:inst|DEC:inst2
+}
+# macro_sequence
+
+# end
+# entity
+HA
+# storage
+db|Register.(17).cnf
+db|Register.(17).cnf
+# case_insensitive
+# source_file
+HA.bdf
+56272683dba222e5aa2efd88e78bdd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block1:inst|ALU:inst|DEC:inst2|HA:inst
+Block1:inst|ALU:inst|DEC:inst2|HA:inst8
+Block1:inst|ALU:inst|DEC:inst2|HA:inst9
+Block1:inst|ALU:inst|DEC:inst2|HA:inst10
+Block1:inst|ALU:inst|FA:inst|HA:inst
+Block1:inst|ALU:inst|FA:inst|HA:inst8
+Block1:inst|ALU:inst|FA:inst|HA:inst9
+Block1:inst|ALU:inst|FA:inst|HA:inst10
+Block1:inst|ALU:inst|SUB:inst1|HA:inst
+Block1:inst|ALU:inst|SUB:inst1|HA:inst8
+Block1:inst|ALU:inst|SUB:inst1|HA:inst9
+Block1:inst|ALU:inst|SUB:inst1|HA:inst10
+}
+# macro_sequence
+
+# end
+# entity
+FA
+# storage
+db|Register.(18).cnf
+db|Register.(18).cnf
+# case_insensitive
+# source_file
+FA.bdf
+18906f9c71e1e9c14940352ce4fe3b6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block1:inst|ALU:inst|FA:inst
+}
+# macro_sequence
+
+# end
+# entity
+SUB
+# storage
+db|Register.(19).cnf
+db|Register.(19).cnf
+# case_insensitive
+# source_file
+SUB.bdf
+d969785b83e968961418d35dc8742b65
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block1:inst|ALU:inst|SUB:inst1
+}
+# macro_sequence
+
+# end
+# entity
+merge3to1
+# storage
+db|Register.(20).cnf
+db|Register.(20).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+merge3to1.v
+b64d40776f5f967b13fa143e6ea0b3d
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+NextState:inst4|merge3to1:READA
+NextState:inst4|merge3to1:READB
+NextState:inst4|merge3to1:WRITEA
+}
+# macro_sequence
+
+# end
+# entity
+Block1
+# storage
+db|Register.(15).cnf
+db|Register.(15).cnf
+# case_insensitive
+# source_file
+Block1.bdf
+9a7a648cba3a39c4f38be65d3e70b714
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block1:inst
+}
+# macro_sequence
+
+# end
+# entity
+NextState
+# storage
+db|Register.(21).cnf
+db|Register.(21).cnf
+# case_insensitive
+# source_file
+NextState.bdf
+deed9bb34b2ae8bc67251959675ce17
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+NextState:inst4
+}
+# macro_sequence
+
+# end
+# entity
+FULL
+# storage
+db|Register.(22).cnf
+db|Register.(22).cnf
+# case_insensitive
+# source_file
+FULL.bdf
+ceb54e8a75e211cbf1fcfaf02b97d939
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ALU
+# storage
+db|Register.(4).cnf
+db|Register.(4).cnf
+# case_insensitive
+# source_file
+ALU.bdf
+f8c2d14b041c027edf43abfcd13f0b6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block1:inst|ALU:inst
+}
+# macro_sequence
+
+# end
+# complete
+

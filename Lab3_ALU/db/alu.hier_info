@@ -1,0 +1,42 @@
+|alu
+pin_name3 <= 74151:inst.Y
+IN[0] => 74151:inst.A
+IN[1] => 74151:inst.B
+IN[2] => 74151:inst.C
+DATA[0] => 74151:inst.D1
+
+
+|alu|74151:inst
+c => f74151:sub.c
+b => f74151:sub.b
+a => f74151:sub.a
+d[0] => ~NO_FANOUT~
+d[1] => f74151:sub.d[1]
+d[2] => ~NO_FANOUT~
+d[3] => ~NO_FANOUT~
+d[4] => ~NO_FANOUT~
+d[5] => ~NO_FANOUT~
+d[6] => ~NO_FANOUT~
+d[7] => ~NO_FANOUT~
+gn => ~NO_FANOUT~
+y <= f74151:sub.y
+wn <= f74151:sub.wn
+
+
+|alu|74151:inst|f74151:sub
+WN <= 85.DB_MAX_OUTPUT_PORT_TYPE
+D0 => 59.IN0
+A => 19.IN0
+D1 => 60.IN0
+B => 17.IN0
+D2 => 61.IN0
+D3 => 62.IN0
+C => 16.IN0
+D4 => 63.IN0
+D5 => 64.IN0
+D6 => 65.IN0
+D7 => 66.IN0
+GN => 13.IN0
+y <= 82.DB_MAX_OUTPUT_PORT_TYPE
+
+

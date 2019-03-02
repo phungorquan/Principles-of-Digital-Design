@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.780 ns
+From           : CLR
+To             : haiz:inst|inst~_emulated
+From Clock     : --
+To Clock       : input
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.953 ns
+From           : haiz:inst|inst1~_emulated
+To             : pin_name6
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.223 ns
+From           : RST
+To             : pin_name6
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.384 ns
+From           : RST
+To             : haiz:inst|inst2~_emulated
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 450.05 MHz ( period = 2.222 ns )
+From           : haiz:inst|inst1~_emulated
+To             : haiz:inst|inst~_emulated
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'input'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 450.05 MHz ( period = 2.222 ns )
+From           : haiz:inst|inst1~_emulated
+To             : haiz:inst|inst~_emulated
+From Clock     : input
+To Clock       : input
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

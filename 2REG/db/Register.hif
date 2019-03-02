@@ -1,0 +1,249 @@
+Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+decoder38
+# storage
+db|Register.(1).cnf
+db|Register.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+decoder38.v
+9e425ad1c3e53b1b134c17d667f44aa
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block3:inst|decoder38:inst2
+Block3:inst|decoder38:inst31
+}
+# macro_sequence
+
+# end
+# entity
+merge
+# storage
+db|Register.(2).cnf
+db|Register.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+merge.v
+a95d9d58dc71cfece1b165c6e4969be
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block3:inst|Register:inst|merge:inst20
+Block3:inst|Register:inst24|merge:inst20
+Block3:inst|Register:inst25|merge:inst20
+Block3:inst|Register:inst26|merge:inst20
+Block3:inst|Register:inst27|merge:inst20
+Block3:inst|Register:inst28|merge:inst20
+Block3:inst|Register:inst29|merge:inst20
+Block3:inst|Register:inst30|merge:inst20
+}
+# macro_sequence
+
+# end
+# entity
+split
+# storage
+db|Register.(3).cnf
+db|Register.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+split.v
+6ee743872babd6dfa41fc8e36c5510bf
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block3:inst|Register:inst|split:inst21
+Block3:inst|Register:inst24|split:inst21
+Block3:inst|Register:inst25|split:inst21
+Block3:inst|Register:inst26|split:inst21
+Block3:inst|Register:inst27|split:inst21
+Block3:inst|Register:inst28|split:inst21
+Block3:inst|Register:inst29|split:inst21
+Block3:inst|Register:inst30|split:inst21
+}
+# macro_sequence
+
+# end
+# entity
+Register
+# storage
+db|Register.(0).cnf
+db|Register.(0).cnf
+# case_insensitive
+# source_file
+Register.bdf
+dda49190e625c128a1894bab76f622
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block3:inst|Register:inst
+Block3:inst|Register:inst24
+Block3:inst|Register:inst25
+Block3:inst|Register:inst26
+Block3:inst|Register:inst27
+Block3:inst|Register:inst28
+Block3:inst|Register:inst29
+Block3:inst|Register:inst30
+}
+# macro_sequence
+
+# end
+# entity
+mux81_4b
+# storage
+db|Register.(6).cnf
+db|Register.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+mux81_4b.v
+10e0d49f1aa6868778231ff1b560
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block3:inst|mux81_4b:inst1
+Block3:inst|mux81_4b:inst35
+}
+# macro_sequence
+
+# end
+# entity
+Block1
+# storage
+db|Register.(4).cnf
+db|Register.(4).cnf
+# case_insensitive
+# source_file
+Block1.bdf
+23327cb58b215d1b21eef742d939bc
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Block3
+# storage
+db|Register.(5).cnf
+db|Register.(5).cnf
+# case_insensitive
+# source_file
+Block3.bdf
+58a98455d4bd3c1a19e8347e37559b9c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block3:inst
+}
+# macro_sequence
+
+# end
+# complete
+

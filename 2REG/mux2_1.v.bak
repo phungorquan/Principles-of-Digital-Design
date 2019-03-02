@@ -1,0 +1,16 @@
+module mux2_1(in0, in1, addr, out);
+
+input wire [3:0] in0, in1;
+
+input wire addr;
+
+output reg [3:0] out;
+
+always @(in0, in1, addr) begin
+  case(addr)
+    3'd0 : out = in0;
+	 3'd1 : out = in1;
+  endcase
+end
+
+endmodule

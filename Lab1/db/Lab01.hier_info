@@ -1,0 +1,37 @@
+|Lab01
+HEX0[0] <= bcd_to_led7:inst22.hex_0
+HEX0[1] <= bcd_to_led7:inst22.hex_1
+HEX0[2] <= bcd_to_led7:inst22.hex_2
+HEX0[3] <= bcd_to_led7:inst22.hex_3
+HEX0[4] <= bcd_to_led7:inst22.hex_4
+HEX0[5] <= bcd_to_led7:inst22.hex_5
+HEX0[6] <= bcd_to_led7:inst22.hex_6
+KEY[0] => inst0.CLK
+KEY[0] => inst1.CLK
+KEY[0] => inst2.CLK
+KEY[1] => inst21.IN0
+SW[0] => inst15.IN1
+SW[0] => inst18.IN0
+SW[1] => inst16.IN1
+SW[1] => inst20.IN0
+SW[2] => inst17.IN1
+SW[2] => inst19.IN0
+LEDG[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab01|bcd_to_led7:inst22
+bcd_3 => Decoder0.IN0
+bcd_2 => Decoder0.IN1
+bcd_1 => Decoder0.IN2
+bcd_0 => Decoder0.IN3
+hex_6 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex_5 <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex_4 <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex_3 <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex_2 <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex_1 <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex_0 <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+

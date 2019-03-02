@@ -1,0 +1,1171 @@
+|FULL
+DONEFLAG <= done.DB_MAX_OUTPUT_PORT_TYPE
+KEY[0] => Block1:inst.CLOCK
+KEY[0] => NextState:inst4.CLK
+SW[0] => Block1:inst.IN[0]
+SW[1] => Block1:inst.IN[1]
+SW[2] => Block1:inst.IN[2]
+SW[3] => Block1:inst.IN[3]
+SW[4] => NextState:inst4.START
+LEDR[0] <= Block1:inst.OUTPUT[0]
+LEDR[1] <= Block1:inst.OUTPUT[1]
+LEDR[2] <= Block1:inst.OUTPUT[2]
+LEDR[3] <= Block1:inst.OUTPUT[3]
+
+
+|FULL|NextState:inst4
+REA <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+CLK => FFD1.CLK
+CLK => FFD0.CLK
+CLK => FFD2.CLK
+START => inst13.IN2
+n_bang_0 => inst9.IN2
+REB <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S0 <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+OE <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+IE <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+WE <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+DONE <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+RAA[0] <= merge3to1:READA.out[0]
+RAA[1] <= merge3to1:READA.out[1]
+RAA[2] <= merge3to1:READA.out[2]
+RAB[0] <= merge3to1:READB.out[0]
+RAB[1] <= merge3to1:READB.out[1]
+RAB[2] <= merge3to1:READB.out[2]
+WA[0] <= merge3to1:WRITEA.out[0]
+WA[1] <= merge3to1:WRITEA.out[1]
+WA[2] <= merge3to1:WRITEA.out[2]
+
+
+|FULL|NextState:inst4|merge3to1:READA
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|NextState:inst4|merge3to1:READB
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|NextState:inst4|merge3to1:WRITEA
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst
+nbangkhong <= ALU:inst.OUTNT
+S1 => ALU:inst.S1
+S0 => ALU:inst.S0
+WE => Block3:REGISTERFILE.WE
+REA => Block3:REGISTERFILE.REA
+REB => Block3:REGISTERFILE.REB
+CLOCK => Block3:REGISTERFILE.CLK
+IE => BUSMUX:SELECTOR.sel
+IN[0] => BUSMUX:SELECTOR.datab[0]
+IN[1] => BUSMUX:SELECTOR.datab[1]
+IN[2] => BUSMUX:SELECTOR.datab[2]
+IN[3] => BUSMUX:SELECTOR.datab[3]
+RAA[0] => Block3:REGISTERFILE.RAA[0]
+RAA[1] => Block3:REGISTERFILE.RAA[1]
+RAA[2] => Block3:REGISTERFILE.RAA[2]
+RAB[0] => Block3:REGISTERFILE.RAB[0]
+RAB[1] => Block3:REGISTERFILE.RAB[1]
+RAB[2] => Block3:REGISTERFILE.RAB[2]
+WA[0] => Block3:REGISTERFILE.WA[0]
+WA[1] => Block3:REGISTERFILE.WA[1]
+WA[2] => Block3:REGISTERFILE.WA[2]
+OUTPUT[0] <= inst5[0].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= inst5[1].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= inst5[2].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= inst5[3].DB_MAX_OUTPUT_PORT_TYPE
+OE => inst5[3].OE
+OE => inst5[2].OE
+OE => inst5[1].OE
+OE => inst5[0].OE
+
+
+|FULL|Block1:inst|ALU:inst
+OUTNT <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+S1 => BUSMUX:inst5.sel
+S0 => BUSMUX:inst3.sel
+S0 => BUSMUX:inst4.sel
+A[0] => DEC:inst2.A[0]
+A[0] => FA:inst.A[0]
+A[0] => SUB:inst1.A[0]
+A[1] => DEC:inst2.A[1]
+A[1] => FA:inst.A[1]
+A[1] => SUB:inst1.A[1]
+A[2] => DEC:inst2.A[2]
+A[2] => FA:inst.A[2]
+A[2] => SUB:inst1.A[2]
+A[3] => DEC:inst2.A[3]
+A[3] => FA:inst.A[3]
+A[3] => SUB:inst1.A[3]
+B[0] => FA:inst.B[0]
+B[0] => SUB:inst1.B[0]
+B[1] => FA:inst.B[1]
+B[1] => SUB:inst1.B[1]
+B[2] => FA:inst.B[2]
+B[2] => SUB:inst1.B[2]
+B[3] => FA:inst.B[3]
+B[3] => SUB:inst1.B[3]
+ALUOUT[0] <= BUSMUX:inst5.result[0]
+ALUOUT[1] <= BUSMUX:inst5.result[1]
+ALUOUT[2] <= BUSMUX:inst5.result[2]
+ALUOUT[3] <= BUSMUX:inst5.result[3]
+
+
+|FULL|Block1:inst|ALU:inst|split:inst6
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst5
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst5|lpm_mux:$00000
+data[0][0] => mux_omc:auto_generated.data[0]
+data[0][1] => mux_omc:auto_generated.data[1]
+data[0][2] => mux_omc:auto_generated.data[2]
+data[0][3] => mux_omc:auto_generated.data[3]
+data[1][0] => mux_omc:auto_generated.data[4]
+data[1][1] => mux_omc:auto_generated.data[5]
+data[1][2] => mux_omc:auto_generated.data[6]
+data[1][3] => mux_omc:auto_generated.data[7]
+sel[0] => mux_omc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_omc:auto_generated.result[0]
+result[1] <= mux_omc:auto_generated.result[1]
+result[2] <= mux_omc:auto_generated.result[2]
+result[3] <= mux_omc:auto_generated.result[3]
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst5|lpm_mux:$00000|mux_omc:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst3
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst3|lpm_mux:$00000
+data[0][0] => mux_omc:auto_generated.data[0]
+data[0][1] => mux_omc:auto_generated.data[1]
+data[0][2] => mux_omc:auto_generated.data[2]
+data[0][3] => mux_omc:auto_generated.data[3]
+data[1][0] => mux_omc:auto_generated.data[4]
+data[1][1] => mux_omc:auto_generated.data[5]
+data[1][2] => mux_omc:auto_generated.data[6]
+data[1][3] => mux_omc:auto_generated.data[7]
+sel[0] => mux_omc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_omc:auto_generated.result[0]
+result[1] <= mux_omc:auto_generated.result[1]
+result[2] <= mux_omc:auto_generated.result[2]
+result[3] <= mux_omc:auto_generated.result[3]
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst3|lpm_mux:$00000|mux_omc:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|DEC:inst2
+COUT <= HA:inst.COUT
+A[0] => split:inst4.in[0]
+A[1] => split:inst4.in[1]
+A[2] => split:inst4.in[2]
+A[3] => split:inst4.in[3]
+DEC[0] <= merge:inst5.out[0]
+DEC[1] <= merge:inst5.out[1]
+DEC[2] <= merge:inst5.out[2]
+DEC[3] <= merge:inst5.out[3]
+
+
+|FULL|Block1:inst|ALU:inst|DEC:inst2|HA:inst
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|DEC:inst2|HA:inst8
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|DEC:inst2|HA:inst9
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|DEC:inst2|HA:inst10
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|DEC:inst2|split:inst4
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|ALU:inst|DEC:inst2|merge:inst5
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|ALU:inst|FA:inst
+COUT <= HA:inst.COUT
+A[0] => split:inst4.in[0]
+A[1] => split:inst4.in[1]
+A[2] => split:inst4.in[2]
+A[3] => split:inst4.in[3]
+B[0] => split:inst6.in[0]
+B[1] => split:inst6.in[1]
+B[2] => split:inst6.in[2]
+B[3] => split:inst6.in[3]
+ADD[0] <= merge:inst5.out[0]
+ADD[1] <= merge:inst5.out[1]
+ADD[2] <= merge:inst5.out[2]
+ADD[3] <= merge:inst5.out[3]
+
+
+|FULL|Block1:inst|ALU:inst|FA:inst|HA:inst
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|FA:inst|HA:inst8
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|FA:inst|HA:inst9
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|FA:inst|HA:inst10
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|FA:inst|split:inst4
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|ALU:inst|FA:inst|split:inst6
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|ALU:inst|FA:inst|merge:inst5
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst4
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst4|lpm_mux:$00000
+data[0][0] => mux_omc:auto_generated.data[0]
+data[0][1] => mux_omc:auto_generated.data[1]
+data[0][2] => mux_omc:auto_generated.data[2]
+data[0][3] => mux_omc:auto_generated.data[3]
+data[1][0] => mux_omc:auto_generated.data[4]
+data[1][1] => mux_omc:auto_generated.data[5]
+data[1][2] => mux_omc:auto_generated.data[6]
+data[1][3] => mux_omc:auto_generated.data[7]
+sel[0] => mux_omc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_omc:auto_generated.result[0]
+result[1] <= mux_omc:auto_generated.result[1]
+result[2] <= mux_omc:auto_generated.result[2]
+result[3] <= mux_omc:auto_generated.result[3]
+
+
+|FULL|Block1:inst|ALU:inst|BUSMUX:inst4|lpm_mux:$00000|mux_omc:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|SUB:inst1
+COUT <= HA:inst.COUT
+A[0] => split:inst4.in[0]
+A[1] => split:inst4.in[1]
+A[2] => split:inst4.in[2]
+A[3] => split:inst4.in[3]
+B[0] => split:inst6.in[0]
+B[1] => split:inst6.in[1]
+B[2] => split:inst6.in[2]
+B[3] => split:inst6.in[3]
+SUB[0] <= merge:inst5.out[0]
+SUB[1] <= merge:inst5.out[1]
+SUB[2] <= merge:inst5.out[2]
+SUB[3] <= merge:inst5.out[3]
+
+
+|FULL|Block1:inst|ALU:inst|SUB:inst1|HA:inst
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|SUB:inst1|HA:inst8
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|SUB:inst1|HA:inst9
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|SUB:inst1|HA:inst10
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst.IN0
+CIN => inst2.IN0
+A => inst1.IN0
+A => inst3.IN1
+B => inst1.IN1
+B => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|ALU:inst|SUB:inst1|split:inst4
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|ALU:inst|SUB:inst1|split:inst6
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|ALU:inst|SUB:inst1|merge:inst5
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE
+A[0] <= BUSMUX:inst2.result[0]
+A[1] <= BUSMUX:inst2.result[1]
+A[2] <= BUSMUX:inst2.result[2]
+A[3] <= BUSMUX:inst2.result[3]
+REA => BUSMUX:inst2.sel
+RAA[0] => mux81_4b:inst1.addr[0]
+RAA[1] => mux81_4b:inst1.addr[1]
+RAA[2] => mux81_4b:inst1.addr[2]
+CLK => Register:inst.CLOCK
+CLK => Register:inst25.CLOCK
+CLK => Register:inst26.CLOCK
+CLK => Register:inst27.CLOCK
+CLK => Register:inst28.CLOCK
+CLK => Register:inst29.CLOCK
+CLK => Register:inst30.CLOCK
+CLK => Register:inst36.CLOCK
+WE => inst8.IN0
+WE => inst9.IN0
+WE => inst10.IN0
+WE => inst11.IN0
+WE => inst12.IN0
+WE => inst13.IN0
+WE => inst14.IN0
+WE => inst15.IN0
+WA[0] => decoder38:inst31.in[0]
+WA[1] => decoder38:inst31.in[1]
+WA[2] => decoder38:inst31.in[2]
+IN[0] => Register:inst.D1[0]
+IN[0] => Register:inst25.D1[0]
+IN[0] => Register:inst26.D1[0]
+IN[0] => Register:inst27.D1[0]
+IN[0] => Register:inst28.D1[0]
+IN[0] => Register:inst29.D1[0]
+IN[0] => Register:inst30.D1[0]
+IN[0] => Register:inst36.D1[0]
+IN[1] => Register:inst.D1[1]
+IN[1] => Register:inst25.D1[1]
+IN[1] => Register:inst26.D1[1]
+IN[1] => Register:inst27.D1[1]
+IN[1] => Register:inst28.D1[1]
+IN[1] => Register:inst29.D1[1]
+IN[1] => Register:inst30.D1[1]
+IN[1] => Register:inst36.D1[1]
+IN[2] => Register:inst.D1[2]
+IN[2] => Register:inst25.D1[2]
+IN[2] => Register:inst26.D1[2]
+IN[2] => Register:inst27.D1[2]
+IN[2] => Register:inst28.D1[2]
+IN[2] => Register:inst29.D1[2]
+IN[2] => Register:inst30.D1[2]
+IN[2] => Register:inst36.D1[2]
+IN[3] => Register:inst.D1[3]
+IN[3] => Register:inst25.D1[3]
+IN[3] => Register:inst26.D1[3]
+IN[3] => Register:inst27.D1[3]
+IN[3] => Register:inst28.D1[3]
+IN[3] => Register:inst29.D1[3]
+IN[3] => Register:inst30.D1[3]
+IN[3] => Register:inst36.D1[3]
+B[0] <= BUSMUX:inst3.result[0]
+B[1] <= BUSMUX:inst3.result[1]
+B[2] <= BUSMUX:inst3.result[2]
+B[3] <= BUSMUX:inst3.result[3]
+REB => BUSMUX:inst3.sel
+RAB[0] => mux81_4b:inst35.addr[0]
+RAB[1] => mux81_4b:inst35.addr[1]
+RAB[2] => mux81_4b:inst35.addr[2]
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2|lpm_mux:$00000
+data[0][0] => mux_omc:auto_generated.data[0]
+data[0][1] => mux_omc:auto_generated.data[1]
+data[0][2] => mux_omc:auto_generated.data[2]
+data[0][3] => mux_omc:auto_generated.data[3]
+data[1][0] => mux_omc:auto_generated.data[4]
+data[1][1] => mux_omc:auto_generated.data[5]
+data[1][2] => mux_omc:auto_generated.data[6]
+data[1][3] => mux_omc:auto_generated.data[7]
+sel[0] => mux_omc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_omc:auto_generated.result[0]
+result[1] <= mux_omc:auto_generated.result[1]
+result[2] <= mux_omc:auto_generated.result[2]
+result[3] <= mux_omc:auto_generated.result[3]
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2|lpm_mux:$00000|mux_omc:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1
+in0[0] => Mux3.IN0
+in0[1] => Mux2.IN0
+in0[2] => Mux1.IN0
+in0[3] => Mux0.IN0
+in1[0] => Mux3.IN1
+in1[1] => Mux2.IN1
+in1[2] => Mux1.IN1
+in1[3] => Mux0.IN1
+in2[0] => Mux3.IN2
+in2[1] => Mux2.IN2
+in2[2] => Mux1.IN2
+in2[3] => Mux0.IN2
+in3[0] => Mux3.IN3
+in3[1] => Mux2.IN3
+in3[2] => Mux1.IN3
+in3[3] => Mux0.IN3
+in4[0] => Mux3.IN4
+in4[1] => Mux2.IN4
+in4[2] => Mux1.IN4
+in4[3] => Mux0.IN4
+in5[0] => Mux3.IN5
+in5[1] => Mux2.IN5
+in5[2] => Mux1.IN5
+in5[3] => Mux0.IN5
+in6[0] => Mux3.IN6
+in6[1] => Mux2.IN6
+in6[2] => Mux1.IN6
+in6[3] => Mux0.IN6
+in7[0] => Mux3.IN7
+in7[1] => Mux2.IN7
+in7[2] => Mux1.IN7
+in7[3] => Mux0.IN7
+addr[0] => Mux3.IN10
+addr[0] => Mux2.IN10
+addr[0] => Mux1.IN10
+addr[0] => Mux0.IN10
+addr[1] => Mux3.IN9
+addr[1] => Mux2.IN9
+addr[1] => Mux1.IN9
+addr[1] => Mux0.IN9
+addr[2] => Mux3.IN8
+addr[2] => Mux2.IN8
+addr[2] => Mux1.IN8
+addr[2] => Mux0.IN8
+out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|decoder38:inst31
+in[0] => Decoder0.IN2
+in[1] => Decoder0.IN1
+in[2] => Decoder0.IN0
+out0 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+ou2 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out3 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out4 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out5 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out6 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out7 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst25
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst25|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst25|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst26
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst26|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst26|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst27
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst27|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst27|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst28
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst28|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst28|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst29
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst29|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst29|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst30
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst30|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst30|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst36
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst36|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|Register:inst36|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|BUSMUX:inst3
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|BUSMUX:inst3|lpm_mux:$00000
+data[0][0] => mux_omc:auto_generated.data[0]
+data[0][1] => mux_omc:auto_generated.data[1]
+data[0][2] => mux_omc:auto_generated.data[2]
+data[0][3] => mux_omc:auto_generated.data[3]
+data[1][0] => mux_omc:auto_generated.data[4]
+data[1][1] => mux_omc:auto_generated.data[5]
+data[1][2] => mux_omc:auto_generated.data[6]
+data[1][3] => mux_omc:auto_generated.data[7]
+sel[0] => mux_omc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_omc:auto_generated.result[0]
+result[1] <= mux_omc:auto_generated.result[1]
+result[2] <= mux_omc:auto_generated.result[2]
+result[3] <= mux_omc:auto_generated.result[3]
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|BUSMUX:inst3|lpm_mux:$00000|mux_omc:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst35
+in0[0] => Mux3.IN0
+in0[1] => Mux2.IN0
+in0[2] => Mux1.IN0
+in0[3] => Mux0.IN0
+in1[0] => Mux3.IN1
+in1[1] => Mux2.IN1
+in1[2] => Mux1.IN1
+in1[3] => Mux0.IN1
+in2[0] => Mux3.IN2
+in2[1] => Mux2.IN2
+in2[2] => Mux1.IN2
+in2[3] => Mux0.IN2
+in3[0] => Mux3.IN3
+in3[1] => Mux2.IN3
+in3[2] => Mux1.IN3
+in3[3] => Mux0.IN3
+in4[0] => Mux3.IN4
+in4[1] => Mux2.IN4
+in4[2] => Mux1.IN4
+in4[3] => Mux0.IN4
+in5[0] => Mux3.IN5
+in5[1] => Mux2.IN5
+in5[2] => Mux1.IN5
+in5[3] => Mux0.IN5
+in6[0] => Mux3.IN6
+in6[1] => Mux2.IN6
+in6[2] => Mux1.IN6
+in6[3] => Mux0.IN6
+in7[0] => Mux3.IN7
+in7[1] => Mux2.IN7
+in7[2] => Mux1.IN7
+in7[3] => Mux0.IN7
+addr[0] => Mux3.IN10
+addr[0] => Mux2.IN10
+addr[0] => Mux1.IN10
+addr[0] => Mux0.IN10
+addr[1] => Mux3.IN9
+addr[1] => Mux2.IN9
+addr[1] => Mux1.IN9
+addr[1] => Mux0.IN9
+addr[2] => Mux3.IN8
+addr[2] => Mux2.IN8
+addr[2] => Mux1.IN8
+addr[2] => Mux0.IN8
+out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FULL|Block1:inst|BUSMUX:SELECTOR
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+
+
+|FULL|Block1:inst|BUSMUX:SELECTOR|lpm_mux:$00000
+data[0][0] => mux_omc:auto_generated.data[0]
+data[0][1] => mux_omc:auto_generated.data[1]
+data[0][2] => mux_omc:auto_generated.data[2]
+data[0][3] => mux_omc:auto_generated.data[3]
+data[1][0] => mux_omc:auto_generated.data[4]
+data[1][1] => mux_omc:auto_generated.data[5]
+data[1][2] => mux_omc:auto_generated.data[6]
+data[1][3] => mux_omc:auto_generated.data[7]
+sel[0] => mux_omc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_omc:auto_generated.result[0]
+result[1] <= mux_omc:auto_generated.result[1]
+result[2] <= mux_omc:auto_generated.result[2]
+result[3] <= mux_omc:auto_generated.result[3]
+
+
+|FULL|Block1:inst|BUSMUX:SELECTOR|lpm_mux:$00000|mux_omc:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

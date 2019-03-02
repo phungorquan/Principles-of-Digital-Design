@@ -1,0 +1,561 @@
+|Block1
+Q1[0] <= Block3:inst.OUT1[0]
+Q1[1] <= Block3:inst.OUT1[1]
+Q1[2] <= Block3:inst.OUT1[2]
+Q1[3] <= Block3:inst.OUT1[3]
+WE1 => Block3:inst.WE1
+WE2 => Block3:inst.WE2
+CLOCK => Block3:inst.CLK
+ADD1[0] => Block3:inst.ADD1[0]
+ADD1[1] => Block3:inst.ADD1[1]
+ADD1[2] => Block3:inst.ADD1[2]
+ADD2[0] => Block3:inst.ADD2[0]
+ADD2[1] => Block3:inst.ADD2[1]
+ADD2[2] => Block3:inst.ADD2[2]
+IN1[0] => Block3:inst.DATA1[0]
+IN1[1] => Block3:inst.DATA1[1]
+IN1[2] => Block3:inst.DATA1[2]
+IN1[3] => Block3:inst.DATA1[3]
+Q2[0] <= Block3:inst.OUT2[0]
+Q2[1] <= Block3:inst.OUT2[1]
+Q2[2] <= Block3:inst.OUT2[2]
+Q2[3] <= Block3:inst.OUT2[3]
+
+
+|Block1|Block3:inst
+OUT1[0] <= mux81_4b:inst1.out[0]
+OUT1[1] <= mux81_4b:inst1.out[1]
+OUT1[2] <= mux81_4b:inst1.out[2]
+OUT1[3] <= mux81_4b:inst1.out[3]
+ADD1[0] => mux81_4b:inst1.addr[0]
+ADD1[0] => decoder38:inst31.in[0]
+ADD1[1] => mux81_4b:inst1.addr[1]
+ADD1[1] => decoder38:inst31.in[1]
+ADD1[2] => mux81_4b:inst1.addr[2]
+ADD1[2] => decoder38:inst31.in[2]
+CLK => Register:inst.CLOCK
+CLK => Register:inst25.CLOCK
+CLK => Register:inst26.CLOCK
+CLK => Register:inst27.CLOCK
+CLK => Register:inst28.CLOCK
+CLK => Register:inst29.CLOCK
+CLK => Register:inst30.CLOCK
+CLK => Register:inst36.CLOCK
+WE2 => inst16.IN0
+WE2 => inst17.IN0
+WE2 => inst18.IN0
+WE2 => inst19.IN0
+WE2 => inst20.IN0
+WE2 => inst21.IN0
+WE2 => inst22.IN0
+WE2 => inst23.IN0
+ADD2[0] => decoder38:inst2.in[0]
+ADD2[0] => mux81_4b:inst35.addr[0]
+ADD2[1] => decoder38:inst2.in[1]
+ADD2[1] => mux81_4b:inst35.addr[1]
+ADD2[2] => decoder38:inst2.in[2]
+ADD2[2] => mux81_4b:inst35.addr[2]
+WE1 => inst8.IN0
+WE1 => inst9.IN0
+WE1 => inst10.IN0
+WE1 => inst11.IN0
+WE1 => inst12.IN0
+WE1 => inst13.IN0
+WE1 => inst14.IN0
+WE1 => inst15.IN0
+DATA1[0] => Register:inst.D1[0]
+DATA1[0] => Register:inst25.D1[0]
+DATA1[0] => Register:inst26.D1[0]
+DATA1[0] => Register:inst27.D1[0]
+DATA1[0] => Register:inst28.D1[0]
+DATA1[0] => Register:inst29.D1[0]
+DATA1[0] => Register:inst30.D1[0]
+DATA1[0] => Register:inst36.D1[0]
+DATA1[1] => Register:inst.D1[1]
+DATA1[1] => Register:inst25.D1[1]
+DATA1[1] => Register:inst26.D1[1]
+DATA1[1] => Register:inst27.D1[1]
+DATA1[1] => Register:inst28.D1[1]
+DATA1[1] => Register:inst29.D1[1]
+DATA1[1] => Register:inst30.D1[1]
+DATA1[1] => Register:inst36.D1[1]
+DATA1[2] => Register:inst.D1[2]
+DATA1[2] => Register:inst25.D1[2]
+DATA1[2] => Register:inst26.D1[2]
+DATA1[2] => Register:inst27.D1[2]
+DATA1[2] => Register:inst28.D1[2]
+DATA1[2] => Register:inst29.D1[2]
+DATA1[2] => Register:inst30.D1[2]
+DATA1[2] => Register:inst36.D1[2]
+DATA1[3] => Register:inst.D1[3]
+DATA1[3] => Register:inst25.D1[3]
+DATA1[3] => Register:inst26.D1[3]
+DATA1[3] => Register:inst27.D1[3]
+DATA1[3] => Register:inst28.D1[3]
+DATA1[3] => Register:inst29.D1[3]
+DATA1[3] => Register:inst30.D1[3]
+DATA1[3] => Register:inst36.D1[3]
+OUT2[0] <= mux81_4b:inst35.out[0]
+OUT2[1] <= mux81_4b:inst35.out[1]
+OUT2[2] <= mux81_4b:inst35.out[2]
+OUT2[3] <= mux81_4b:inst35.out[3]
+
+
+|Block1|Block3:inst|mux81_4b:inst1
+in0[0] => Mux3.IN0
+in0[1] => Mux2.IN0
+in0[2] => Mux1.IN0
+in0[3] => Mux0.IN0
+in1[0] => Mux3.IN1
+in1[1] => Mux2.IN1
+in1[2] => Mux1.IN1
+in1[3] => Mux0.IN1
+in2[0] => Mux3.IN2
+in2[1] => Mux2.IN2
+in2[2] => Mux1.IN2
+in2[3] => Mux0.IN2
+in3[0] => Mux3.IN3
+in3[1] => Mux2.IN3
+in3[2] => Mux1.IN3
+in3[3] => Mux0.IN3
+in4[0] => Mux3.IN4
+in4[1] => Mux2.IN4
+in4[2] => Mux1.IN4
+in4[3] => Mux0.IN4
+in5[0] => Mux3.IN5
+in5[1] => Mux2.IN5
+in5[2] => Mux1.IN5
+in5[3] => Mux0.IN5
+in6[0] => Mux3.IN6
+in6[1] => Mux2.IN6
+in6[2] => Mux1.IN6
+in6[3] => Mux0.IN6
+in7[0] => Mux3.IN7
+in7[1] => Mux2.IN7
+in7[2] => Mux1.IN7
+in7[3] => Mux0.IN7
+addr[0] => Mux3.IN10
+addr[0] => Mux2.IN10
+addr[0] => Mux1.IN10
+addr[0] => Mux0.IN10
+addr[1] => Mux3.IN9
+addr[1] => Mux2.IN9
+addr[1] => Mux1.IN9
+addr[1] => Mux0.IN9
+addr[2] => Mux3.IN8
+addr[2] => Mux2.IN8
+addr[2] => Mux1.IN8
+addr[2] => Mux0.IN8
+out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|Block3:inst|Register:inst
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|Block1|Block3:inst|Register:inst|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|Block1|Block3:inst|Register:inst|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|Block1|Block3:inst|decoder38:inst2
+in[0] => Decoder0.IN2
+in[1] => Decoder0.IN1
+in[2] => Decoder0.IN0
+out0 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+ou2 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out3 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out4 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out5 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out6 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out7 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|Block3:inst|decoder38:inst31
+in[0] => Decoder0.IN2
+in[1] => Decoder0.IN1
+in[2] => Decoder0.IN0
+out0 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+ou2 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out3 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out4 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out5 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out6 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out7 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|Block3:inst|Register:inst25
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|Block1|Block3:inst|Register:inst25|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|Block1|Block3:inst|Register:inst25|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|Block1|Block3:inst|Register:inst26
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|Block1|Block3:inst|Register:inst26|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|Block1|Block3:inst|Register:inst26|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|Block1|Block3:inst|Register:inst27
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|Block1|Block3:inst|Register:inst27|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|Block1|Block3:inst|Register:inst27|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|Block1|Block3:inst|Register:inst28
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|Block1|Block3:inst|Register:inst28|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|Block1|Block3:inst|Register:inst28|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|Block1|Block3:inst|Register:inst29
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|Block1|Block3:inst|Register:inst29|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|Block1|Block3:inst|Register:inst29|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|Block1|Block3:inst|Register:inst30
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|Block1|Block3:inst|Register:inst30|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|Block1|Block3:inst|Register:inst30|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|Block1|Block3:inst|Register:inst36
+Q1[0] <= merge:inst20.out[0]
+Q1[1] <= merge:inst20.out[1]
+Q1[2] <= merge:inst20.out[2]
+Q1[3] <= merge:inst20.out[3]
+D1[0] => split:inst21.in[0]
+D1[1] => split:inst21.in[1]
+D1[2] => split:inst21.in[2]
+D1[3] => split:inst21.in[3]
+CLOCK => inst3.CLK
+CLOCK => inst2.CLK
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+ENABLE => inst3.ENA
+ENABLE => inst2.ENA
+ENABLE => inst1.ENA
+ENABLE => inst.ENA
+
+
+|Block1|Block3:inst|Register:inst36|merge:inst20
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+
+|Block1|Block3:inst|Register:inst36|split:inst21
+out3 <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out2 <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out1 <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out0 <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out0.DATAIN
+in[1] => out1.DATAIN
+in[2] => out2.DATAIN
+in[3] => out3.DATAIN
+
+
+|Block1|Block3:inst|mux81_4b:inst35
+in0[0] => Mux3.IN0
+in0[1] => Mux2.IN0
+in0[2] => Mux1.IN0
+in0[3] => Mux0.IN0
+in1[0] => Mux3.IN1
+in1[1] => Mux2.IN1
+in1[2] => Mux1.IN1
+in1[3] => Mux0.IN1
+in2[0] => Mux3.IN2
+in2[1] => Mux2.IN2
+in2[2] => Mux1.IN2
+in2[3] => Mux0.IN2
+in3[0] => Mux3.IN3
+in3[1] => Mux2.IN3
+in3[2] => Mux1.IN3
+in3[3] => Mux0.IN3
+in4[0] => Mux3.IN4
+in4[1] => Mux2.IN4
+in4[2] => Mux1.IN4
+in4[3] => Mux0.IN4
+in5[0] => Mux3.IN5
+in5[1] => Mux2.IN5
+in5[2] => Mux1.IN5
+in5[3] => Mux0.IN5
+in6[0] => Mux3.IN6
+in6[1] => Mux2.IN6
+in6[2] => Mux1.IN6
+in6[3] => Mux0.IN6
+in7[0] => Mux3.IN7
+in7[1] => Mux2.IN7
+in7[2] => Mux1.IN7
+in7[3] => Mux0.IN7
+addr[0] => Mux3.IN10
+addr[0] => Mux2.IN10
+addr[0] => Mux1.IN10
+addr[0] => Mux0.IN10
+addr[1] => Mux3.IN9
+addr[1] => Mux2.IN9
+addr[1] => Mux1.IN9
+addr[1] => Mux0.IN9
+addr[2] => Mux3.IN8
+addr[2] => Mux2.IN8
+addr[2] => Mux1.IN8
+addr[2] => Mux0.IN8
+out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

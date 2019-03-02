@@ -1,0 +1,337 @@
+|FULL
+S0 <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst4.ACLR
+CLR => inst2.ACLR
+CLR => inst3.ACLR
+CLR => Block2:inst.CLR
+CLK => inst4.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => Block2:inst.CLOCK
+S1 <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+FLICK => inst19.IN0
+FLICK => inst29.IN1
+FLICK => inst51.IN3
+START => inst27.IN3
+pin_name <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+pin_name41 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+pin_name42 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+OUT[15] <= Block2:inst.OUT[15]
+OUT[14] <= Block2:inst.OUT[14]
+OUT[13] <= Block2:inst.OUT[13]
+OUT[12] <= Block2:inst.OUT[12]
+OUT[11] <= Block2:inst.OUT[11]
+OUT[10] <= Block2:inst.OUT[10]
+OUT[9] <= Block2:inst.OUT[9]
+OUT[8] <= Block2:inst.OUT[8]
+OUT[7] <= Block2:inst.OUT[7]
+OUT[6] <= Block2:inst.OUT[6]
+OUT[5] <= Block2:inst.OUT[5]
+OUT[4] <= Block2:inst.OUT[4]
+OUT[3] <= Block2:inst.OUT[3]
+OUT[2] <= Block2:inst.OUT[2]
+OUT[1] <= Block2:inst.OUT[1]
+OUT[0] <= Block2:inst.OUT[0]
+
+
+|FULL|Block2:inst
+0 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst17.ACLR
+CLR => inst18.ACLR
+CLR => inst19.ACLR
+CLR => inst20.ACLR
+CLR => inst21.ACLR
+CLR => inst22.ACLR
+CLR => inst23.ACLR
+CLR => inst24.ACLR
+CLR => inst25.ACLR
+CLR => inst26.ACLR
+CLR => inst27.ACLR
+CLR => inst28.ACLR
+CLR => inst29.ACLR
+CLR => inst30.ACLR
+CLR => inst31.ACLR
+CLR => inst16.ACLR
+CLOCK => inst17.CLK
+CLOCK => inst18.CLK
+CLOCK => inst19.CLK
+CLOCK => inst20.CLK
+CLOCK => inst21.CLK
+CLOCK => inst22.CLK
+CLOCK => inst23.CLK
+CLOCK => inst24.CLK
+CLOCK => inst25.CLK
+CLOCK => inst26.CLK
+CLOCK => inst27.CLK
+CLOCK => inst28.CLK
+CLOCK => inst29.CLK
+CLOCK => inst30.CLK
+CLOCK => inst31.CLK
+CLOCK => inst16.CLK
+S0 => MUX41:inst1.S0
+S0 => MUX41:inst2.S0
+S0 => MUX41:inst3.S0
+S0 => MUX41:inst4.S0
+S0 => MUX41:inst5.S0
+S0 => MUX41:inst6.S0
+S0 => MUX41:inst7.S0
+S0 => MUX41:inst9.S0
+S0 => MUX41:inst8.S0
+S0 => MUX41:inst10.S0
+S0 => MUX41:inst11.S0
+S0 => MUX41:inst12.S0
+S0 => MUX41:inst13.S0
+S0 => MUX41:inst14.S0
+S0 => MUX41:inst15.S0
+S0 => MUX41:inst.S0
+IR => MUX41:inst15.D2
+S1 => MUX41:inst15.S1
+S1 => MUX41:inst14.S1
+S1 => MUX41:inst13.S1
+S1 => MUX41:inst12.S1
+S1 => MUX41:inst11.S1
+S1 => MUX41:inst10.S1
+S1 => MUX41:inst8.S1
+S1 => MUX41:inst9.S1
+S1 => MUX41:inst7.S1
+S1 => MUX41:inst6.S1
+S1 => MUX41:inst5.S1
+S1 => MUX41:inst4.S1
+S1 => MUX41:inst3.S1
+S1 => MUX41:inst2.S1
+S1 => MUX41:inst1.S1
+S1 => MUX41:inst.S1
+IL => MUX41:inst.D3
+5 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+10 <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+15 <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+4 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+OUT[15] <= merge:inst33.out[0]
+OUT[14] <= merge:inst33.out[1]
+OUT[13] <= merge:inst33.out[2]
+OUT[12] <= merge:inst33.out[3]
+OUT[11] <= merge:inst33.out[4]
+OUT[10] <= merge:inst33.out[5]
+OUT[9] <= merge:inst33.out[6]
+OUT[8] <= merge:inst33.out[7]
+OUT[7] <= merge:inst33.out[8]
+OUT[6] <= merge:inst33.out[9]
+OUT[5] <= merge:inst33.out[10]
+OUT[4] <= merge:inst33.out[11]
+OUT[3] <= merge:inst33.out[12]
+OUT[2] <= merge:inst33.out[13]
+OUT[1] <= merge:inst33.out[14]
+OUT[0] <= merge:inst33.out[15]
+
+
+|FULL|Block2:inst|MUX41:inst1
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst2
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst3
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst4
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst5
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst6
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst7
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst9
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst8
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst10
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst11
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst12
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst13
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst14
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst15
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|MUX41:inst
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
+INH => 7.IN0
+S1 => 8.IN0
+S0 => 10.IN0
+D0 => 2.IN3
+D1 => 3.IN3
+D2 => 4.IN3
+D3 => 5.IN3
+
+
+|FULL|Block2:inst|merge:inst33
+out[0] <= in0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= in4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= in5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= in6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= in7.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= in8.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= in9.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= in10.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= in11.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= in12.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= in13.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= in14.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= in15.DB_MAX_OUTPUT_PORT_TYPE
+in15 => out[15].DATAIN
+in14 => out[14].DATAIN
+in13 => out[13].DATAIN
+in12 => out[12].DATAIN
+in11 => out[11].DATAIN
+in10 => out[10].DATAIN
+in9 => out[9].DATAIN
+in8 => out[8].DATAIN
+in7 => out[7].DATAIN
+in6 => out[6].DATAIN
+in5 => out[5].DATAIN
+in4 => out[4].DATAIN
+in3 => out[3].DATAIN
+in2 => out[2].DATAIN
+in1 => out[1].DATAIN
+in0 => out[0].DATAIN
+
+

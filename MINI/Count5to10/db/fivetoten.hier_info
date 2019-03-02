@@ -1,0 +1,9 @@
+|fivetoten
+Y[0] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst2.CLK
+CLK => inst.CLK
+CLK => inst1.CLK
+
+

@@ -1,0 +1,292 @@
+Simulator report for tklls
+Sun Sep 23 01:18:55 2018
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 92 nodes     ;
+; Simulation Coverage         ;      57.61 % ;
+; Total Number of Transitions ; 124          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      57.61 % ;
+; Total nodes checked                                 ; 92           ;
+; Total output ports checked                          ; 92           ;
+; Total output ports with complete 1/0-value coverage ; 53           ;
+; Total output ports with no 1/0-value coverage       ; 39           ;
+; Total output ports with no 1-value coverage         ; 39           ;
+; Total output ports with no 0-value coverage         ; 39           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                ;
++-------------------+---------------------+------------------+
+; Node Name         ; Output Port Name    ; Output Port Type ;
++-------------------+---------------------+------------------+
+; |tklls|inst11~0   ; |tklls|inst11~0     ; combout          ;
+; |tklls|inst11~1   ; |tklls|inst11~1     ; combout          ;
+; |tklls|inst11     ; |tklls|inst11       ; combout          ;
+; |tklls|inst12~0   ; |tklls|inst12~0     ; combout          ;
+; |tklls|inst12~1   ; |tklls|inst12~1     ; combout          ;
+; |tklls|inst12~2   ; |tklls|inst12~2     ; combout          ;
+; |tklls|inst12~3   ; |tklls|inst12~3     ; combout          ;
+; |tklls|inst12~4   ; |tklls|inst12~4     ; combout          ;
+; |tklls|inst12~5   ; |tklls|inst12~5     ; combout          ;
+; |tklls|inst12~6   ; |tklls|inst12~6     ; combout          ;
+; |tklls|inst12     ; |tklls|inst12       ; combout          ;
+; |tklls|inst42~4   ; |tklls|inst42~4     ; combout          ;
+; |tklls|inst42~6   ; |tklls|inst42~6     ; combout          ;
+; |tklls|inst42     ; |tklls|inst42       ; combout          ;
+; |tklls|inst43     ; |tklls|inst43       ; combout          ;
+; |tklls|Result_AND ; |tklls|Result_AND   ; padio            ;
+; |tklls|Result_OR  ; |tklls|Result_OR    ; padio            ;
+; |tklls|Result_XOR ; |tklls|Result_XOR   ; padio            ;
+; |tklls|Result_NOT ; |tklls|Result_NOT   ; padio            ;
+; |tklls|Result_MUX ; |tklls|Result_MUX   ; padio            ;
+; |tklls|AND26      ; |tklls|AND26~corein ; combout          ;
+; |tklls|AND28      ; |tklls|AND28~corein ; combout          ;
+; |tklls|AND24      ; |tklls|AND24~corein ; combout          ;
+; |tklls|AND29      ; |tklls|AND29~corein ; combout          ;
+; |tklls|AND27      ; |tklls|AND27~corein ; combout          ;
+; |tklls|AND30      ; |tklls|AND30~corein ; combout          ;
+; |tklls|AND31      ; |tklls|AND31~corein ; combout          ;
+; |tklls|AND25      ; |tklls|AND25~corein ; combout          ;
+; |tklls|AND14      ; |tklls|AND14~corein ; combout          ;
+; |tklls|AND9       ; |tklls|AND9~corein  ; combout          ;
+; |tklls|AND8       ; |tklls|AND8~corein  ; combout          ;
+; |tklls|AND13      ; |tklls|AND13~corein ; combout          ;
+; |tklls|AND4       ; |tklls|AND4~corein  ; combout          ;
+; |tklls|AND16      ; |tklls|AND16~corein ; combout          ;
+; |tklls|AND1       ; |tklls|AND1~corein  ; combout          ;
+; |tklls|AND7       ; |tklls|AND7~corein  ; combout          ;
+; |tklls|AND11      ; |tklls|AND11~corein ; combout          ;
+; |tklls|AND12      ; |tklls|AND12~corein ; combout          ;
+; |tklls|AND10      ; |tklls|AND10~corein ; combout          ;
+; |tklls|AND20      ; |tklls|AND20~corein ; combout          ;
+; |tklls|AND15      ; |tklls|AND15~corein ; combout          ;
+; |tklls|AND3       ; |tklls|AND3~corein  ; combout          ;
+; |tklls|AND17      ; |tklls|AND17~corein ; combout          ;
+; |tklls|AND23      ; |tklls|AND23~corein ; combout          ;
+; |tklls|AND22      ; |tklls|AND22~corein ; combout          ;
+; |tklls|AND2       ; |tklls|AND2~corein  ; combout          ;
+; |tklls|AND21      ; |tklls|AND21~corein ; combout          ;
+; |tklls|AND0       ; |tklls|AND0~corein  ; combout          ;
+; |tklls|AND18      ; |tklls|AND18~corein ; combout          ;
+; |tklls|AND5       ; |tklls|AND5~corein  ; combout          ;
+; |tklls|AND6       ; |tklls|AND6~corein  ; combout          ;
+; |tklls|AND19      ; |tklls|AND19~corein ; combout          ;
+; |tklls|OR4        ; |tklls|OR4~corein   ; combout          ;
++-------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------+
+; Missing 1-Value Coverage                                ;
++-----------------+--------------------+------------------+
+; Node Name       ; Output Port Name   ; Output Port Type ;
++-----------------+--------------------+------------------+
+; |tklls|inst41~0 ; |tklls|inst41~0    ; combout          ;
+; |tklls|inst41~1 ; |tklls|inst41~1    ; combout          ;
+; |tklls|inst41   ; |tklls|inst41      ; combout          ;
+; |tklls|inst42~0 ; |tklls|inst42~0    ; combout          ;
+; |tklls|inst42~1 ; |tklls|inst42~1    ; combout          ;
+; |tklls|inst42~2 ; |tklls|inst42~2    ; combout          ;
+; |tklls|inst42~3 ; |tklls|inst42~3    ; combout          ;
+; |tklls|inst42~5 ; |tklls|inst42~5    ; combout          ;
+; |tklls|OR26     ; |tklls|OR26~corein ; combout          ;
+; |tklls|OR31     ; |tklls|OR31~corein ; combout          ;
+; |tklls|OR24     ; |tklls|OR24~corein ; combout          ;
+; |tklls|OR28     ; |tklls|OR28~corein ; combout          ;
+; |tklls|OR27     ; |tklls|OR27~corein ; combout          ;
+; |tklls|OR29     ; |tklls|OR29~corein ; combout          ;
+; |tklls|OR30     ; |tklls|OR30~corein ; combout          ;
+; |tklls|OR25     ; |tklls|OR25~corein ; combout          ;
+; |tklls|OR5      ; |tklls|OR5~corein  ; combout          ;
+; |tklls|OR16     ; |tklls|OR16~corein ; combout          ;
+; |tklls|OR19     ; |tklls|OR19~corein ; combout          ;
+; |tklls|OR0      ; |tklls|OR0~corein  ; combout          ;
+; |tklls|OR22     ; |tklls|OR22~corein ; combout          ;
+; |tklls|OR10     ; |tklls|OR10~corein ; combout          ;
+; |tklls|OR12     ; |tklls|OR12~corein ; combout          ;
+; |tklls|OR15     ; |tklls|OR15~corein ; combout          ;
+; |tklls|OR23     ; |tklls|OR23~corein ; combout          ;
+; |tklls|OR8      ; |tklls|OR8~corein  ; combout          ;
+; |tklls|OR18     ; |tklls|OR18~corein ; combout          ;
+; |tklls|OR7      ; |tklls|OR7~corein  ; combout          ;
+; |tklls|OR9      ; |tklls|OR9~corein  ; combout          ;
+; |tklls|OR21     ; |tklls|OR21~corein ; combout          ;
+; |tklls|OR2      ; |tklls|OR2~corein  ; combout          ;
+; |tklls|OR11     ; |tklls|OR11~corein ; combout          ;
+; |tklls|OR6      ; |tklls|OR6~corein  ; combout          ;
+; |tklls|OR17     ; |tklls|OR17~corein ; combout          ;
+; |tklls|OR20     ; |tklls|OR20~corein ; combout          ;
+; |tklls|OR1      ; |tklls|OR1~corein  ; combout          ;
+; |tklls|OR14     ; |tklls|OR14~corein ; combout          ;
+; |tklls|OR13     ; |tklls|OR13~corein ; combout          ;
+; |tklls|OR3      ; |tklls|OR3~corein  ; combout          ;
++-----------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------+
+; Missing 0-Value Coverage                                ;
++-----------------+--------------------+------------------+
+; Node Name       ; Output Port Name   ; Output Port Type ;
++-----------------+--------------------+------------------+
+; |tklls|inst41~0 ; |tklls|inst41~0    ; combout          ;
+; |tklls|inst41~1 ; |tklls|inst41~1    ; combout          ;
+; |tklls|inst41   ; |tklls|inst41      ; combout          ;
+; |tklls|inst42~0 ; |tklls|inst42~0    ; combout          ;
+; |tklls|inst42~1 ; |tklls|inst42~1    ; combout          ;
+; |tklls|inst42~2 ; |tklls|inst42~2    ; combout          ;
+; |tklls|inst42~3 ; |tklls|inst42~3    ; combout          ;
+; |tklls|inst42~5 ; |tklls|inst42~5    ; combout          ;
+; |tklls|OR26     ; |tklls|OR26~corein ; combout          ;
+; |tklls|OR31     ; |tklls|OR31~corein ; combout          ;
+; |tklls|OR24     ; |tklls|OR24~corein ; combout          ;
+; |tklls|OR28     ; |tklls|OR28~corein ; combout          ;
+; |tklls|OR27     ; |tklls|OR27~corein ; combout          ;
+; |tklls|OR29     ; |tklls|OR29~corein ; combout          ;
+; |tklls|OR30     ; |tklls|OR30~corein ; combout          ;
+; |tklls|OR25     ; |tklls|OR25~corein ; combout          ;
+; |tklls|OR5      ; |tklls|OR5~corein  ; combout          ;
+; |tklls|OR16     ; |tklls|OR16~corein ; combout          ;
+; |tklls|OR19     ; |tklls|OR19~corein ; combout          ;
+; |tklls|OR0      ; |tklls|OR0~corein  ; combout          ;
+; |tklls|OR22     ; |tklls|OR22~corein ; combout          ;
+; |tklls|OR10     ; |tklls|OR10~corein ; combout          ;
+; |tklls|OR12     ; |tklls|OR12~corein ; combout          ;
+; |tklls|OR15     ; |tklls|OR15~corein ; combout          ;
+; |tklls|OR23     ; |tklls|OR23~corein ; combout          ;
+; |tklls|OR8      ; |tklls|OR8~corein  ; combout          ;
+; |tklls|OR18     ; |tklls|OR18~corein ; combout          ;
+; |tklls|OR7      ; |tklls|OR7~corein  ; combout          ;
+; |tklls|OR9      ; |tklls|OR9~corein  ; combout          ;
+; |tklls|OR21     ; |tklls|OR21~corein ; combout          ;
+; |tklls|OR2      ; |tklls|OR2~corein  ; combout          ;
+; |tklls|OR11     ; |tklls|OR11~corein ; combout          ;
+; |tklls|OR6      ; |tklls|OR6~corein  ; combout          ;
+; |tklls|OR17     ; |tklls|OR17~corein ; combout          ;
+; |tklls|OR20     ; |tklls|OR20~corein ; combout          ;
+; |tklls|OR1      ; |tklls|OR1~corein  ; combout          ;
+; |tklls|OR14     ; |tklls|OR14~corein ; combout          ;
+; |tklls|OR13     ; |tklls|OR13~corein ; combout          ;
+; |tklls|OR3      ; |tklls|OR3~corein  ; combout          ;
++-----------------+--------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Sep 23 01:18:55 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off tklls -c tklls
+Info: Using vector source file "D:/Poor/Slide/HK5/TKLLS/Quartus/tklls.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      57.61 %
+Info: Number of transitions in simulation is 124
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 161 megabytes
+    Info: Processing ended: Sun Sep 23 01:18:55 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

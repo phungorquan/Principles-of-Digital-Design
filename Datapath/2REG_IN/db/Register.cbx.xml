@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Register">
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|ALU:inst|BUSMUX:inst3|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1|lpm_mux:Mux1" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst35|lpm_mux:Mux2" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|ALU:inst|BUSMUX:inst4|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1|lpm_mux:Mux2" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst35|lpm_mux:Mux3" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|ALU:inst|BUSMUX:inst5|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|BUSMUX:SELECTOR|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1|lpm_mux:Mux3" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst35|lpm_mux:Mux0" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|BUSMUX:inst3|lpm_mux:$00000" CBX_FILE_NAME="mux_omc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1|lpm_mux:Mux0" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst35|lpm_mux:Mux1" CBX_FILE_NAME="mux_3nc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

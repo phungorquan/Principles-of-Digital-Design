@@ -1,0 +1,233 @@
+Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74154
+# storage
+db|haiz.(1).cnf
+db|haiz.(1).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|others|maxplus2|74154.bdf
+e85b96214fb1fdaee89ede7a6a6d204a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+haiz
+# storage
+db|haiz.(2).cnf
+db|haiz.(2).cnf
+# case_insensitive
+# source_file
+haiz.bdf
+2493c44c02f8c83095c799c2c158ab
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Inc1
+# storage
+db|haiz.(3).cnf
+db|haiz.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Verilog1.v
+a2ecb82273818bc1a51c2e58177a2ee
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+Sub1
+# storage
+db|haiz.(4).cnf
+db|haiz.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Sub1.v
+78117e7bb9e297b6b709b698739fec
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+MUX41
+# storage
+db|haiz.(6).cnf
+db|haiz.(6).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|..|quartus|quartus|libraries|others|maxplus2|MUX41.bdf
+d7193e1c17cd49f17046e8139e73d6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block2:inst|MUX41:inst1
+Block2:inst|MUX41:inst2
+Block2:inst|MUX41:inst3
+Block2:inst|MUX41:inst4
+Block2:inst|MUX41:inst5
+Block2:inst|MUX41:inst6
+Block2:inst|MUX41:inst7
+Block2:inst|MUX41:inst9
+Block2:inst|MUX41:inst8
+Block2:inst|MUX41:inst10
+Block2:inst|MUX41:inst11
+Block2:inst|MUX41:inst12
+Block2:inst|MUX41:inst13
+Block2:inst|MUX41:inst14
+Block2:inst|MUX41:inst15
+Block2:inst|MUX41:inst
+}
+# macro_sequence
+
+# end
+# entity
+merge
+# storage
+db|haiz.(8).cnf
+db|haiz.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+merge.v
+86f13779f2a2afd3a70dd2f36821a8a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Block2:inst|merge:inst33
+}
+# macro_sequence
+
+# end
+# entity
+Block2
+# storage
+db|haiz.(0).cnf
+db|haiz.(0).cnf
+# case_insensitive
+# source_file
+Block2.bdf
+8490c584d7f23d2d216a6088a5dd6024
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Block2:inst
+}
+# macro_sequence
+
+# end
+# entity
+FULL
+# storage
+db|haiz.(9).cnf
+db|haiz.(9).cnf
+# case_insensitive
+# source_file
+FULL.bdf
+4c731c57cbb9d88f6db5a5d571bca3
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

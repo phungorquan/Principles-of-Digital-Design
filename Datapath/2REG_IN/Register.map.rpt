@@ -1,0 +1,439 @@
+Analysis & Synthesis report for Register
+Wed Dec 19 14:02:03 2018
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Block1:inst|ALU:inst|BUSMUX:inst5
+ 11. Parameter Settings for User Entity Instance: Block1:inst|ALU:inst|BUSMUX:inst3
+ 12. Parameter Settings for User Entity Instance: Block1:inst|ALU:inst|BUSMUX:inst4
+ 13. Parameter Settings for User Entity Instance: Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2
+ 14. Parameter Settings for User Entity Instance: Block1:inst|Block3:REGISTERFILE|BUSMUX:inst3
+ 15. Parameter Settings for User Entity Instance: Block1:inst|BUSMUX:SELECTOR
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 19 14:02:03 2018        ;
+; Quartus II Version                 ; 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition ;
+; Revision Name                      ; Register                                     ;
+; Top-level Entity Name              ; FULL                                         ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 68                                           ;
+;     Total combinational functions  ; 55                                           ;
+;     Dedicated logic registers      ; 19                                           ;
+; Total registers                    ; 19                                           ;
+; Total pins                         ; 11                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                        ; FULL               ; Register           ;
+; Family name                                                  ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+; Register.bdf                     ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/Register.bdf   ;
+; Block3.bdf                       ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/Block3.bdf     ;
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/Block1.bdf     ;
+; HA.bdf                           ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/HA.bdf         ;
+; FA.bdf                           ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/FA.bdf         ;
+; SUB.bdf                          ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/SUB.bdf        ;
+; DEC.bdf                          ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/DEC.bdf        ;
+; ALU.bdf                          ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/ALU.bdf        ;
+; NextState.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/NextState.bdf  ;
+; FULL.bdf                         ; yes             ; User Block Diagram/Schematic File  ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/FULL.bdf       ;
+; merge3to1.v                      ; yes             ; User Verilog HDL File              ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/merge3to1.v    ;
+; split.v                          ; yes             ; Auto-Found Verilog HDL File        ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/split.v        ;
+; BUSMUX.tdf                       ; yes             ; Megafunction                       ; e:/quartus/quartus/libraries/megafunctions/BUSMUX.tdf       ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; e:/quartus/quartus/libraries/megafunctions/lpm_mux.inc      ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; e:/quartus/quartus/libraries/megafunctions/lpm_mux.tdf      ;
+; aglobal90.inc                    ; yes             ; Megafunction                       ; e:/quartus/quartus/libraries/megafunctions/aglobal90.inc    ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; e:/quartus/quartus/libraries/megafunctions/muxlut.inc       ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; e:/quartus/quartus/libraries/megafunctions/bypassff.inc     ;
+; altshift.inc                     ; yes             ; Megafunction                       ; e:/quartus/quartus/libraries/megafunctions/altshift.inc     ;
+; db/mux_omc.tdf                   ; yes             ; Auto-Generated Megafunction        ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/db/mux_omc.tdf ;
+; merge.v                          ; yes             ; Auto-Found Verilog HDL File        ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/merge.v        ;
+; mux81_4b.v                       ; yes             ; Auto-Found Verilog HDL File        ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/mux81_4b.v     ;
+; decoder38.v                      ; yes             ; Auto-Found Verilog HDL File        ; E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/decoder38.v    ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 68                   ;
+;                                             ;                      ;
+; Total combinational functions               ; 55                   ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 42                   ;
+;     -- 3 input functions                    ; 7                    ;
+;     -- <=2 input functions                  ; 6                    ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 55                   ;
+;     -- arithmetic mode                      ; 0                    ;
+;                                             ;                      ;
+; Total registers                             ; 19                   ;
+;     -- Dedicated logic registers            ; 19                   ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 11                   ;
+; Maximum fan-out node                        ; NextState:inst4|FFD0 ;
+; Maximum fan-out                             ; 24                   ;
+; Total fan-out                               ; 265                  ;
+; Average fan-out                             ; 3.12                 ;
++---------------------------------------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; |FULL                                   ; 55 (0)            ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |FULL                                                                                    ; work         ;
+;    |Block1:inst|                        ; 47 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst                                                                        ; work         ;
+;       |ALU:inst|                        ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst                                                               ; work         ;
+;          |DEC:inst2|                    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|DEC:inst2                                                     ; work         ;
+;             |HA:inst9|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|DEC:inst2|HA:inst9                                            ; work         ;
+;          |FA:inst|                      ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|FA:inst                                                       ; work         ;
+;             |HA:inst8|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|FA:inst|HA:inst8                                              ; work         ;
+;             |HA:inst9|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|FA:inst|HA:inst9                                              ; work         ;
+;             |HA:inst|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|FA:inst|HA:inst                                               ; work         ;
+;          |SUB:inst1|                    ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|SUB:inst1                                                     ; work         ;
+;             |HA:inst8|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|SUB:inst1|HA:inst8                                            ; work         ;
+;             |HA:inst9|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|SUB:inst1|HA:inst9                                            ; work         ;
+;          |busmux:inst5|                 ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|busmux:inst5                                                  ; work         ;
+;             |lpm_mux:$00000|            ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|busmux:inst5|lpm_mux:$00000                                   ; work         ;
+;                |mux_omc:auto_generated| ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|ALU:inst|busmux:inst5|lpm_mux:$00000|mux_omc:auto_generated            ; work         ;
+;       |Block3:REGISTERFILE|             ; 24 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE                                                    ; work         ;
+;          |Register:inst25|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|Register:inst25                                    ; work         ;
+;          |Register:inst26|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|Register:inst26                                    ; work         ;
+;          |Register:inst27|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|Register:inst27                                    ; work         ;
+;          |Register:inst|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|Register:inst                                      ; work         ;
+;          |busmux:inst2|                 ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|busmux:inst2                                       ; work         ;
+;             |lpm_mux:$00000|            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|busmux:inst2|lpm_mux:$00000                        ; work         ;
+;                |mux_omc:auto_generated| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|busmux:inst2|lpm_mux:$00000|mux_omc:auto_generated ; work         ;
+;          |busmux:inst3|                 ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|busmux:inst3                                       ; work         ;
+;             |lpm_mux:$00000|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|busmux:inst3|lpm_mux:$00000                        ; work         ;
+;                |mux_omc:auto_generated| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|busmux:inst3|lpm_mux:$00000|mux_omc:auto_generated ; work         ;
+;          |decoder38:inst31|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|decoder38:inst31                                   ; work         ;
+;          |mux81_4b:inst1|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1                                     ; work         ;
+;          |mux81_4b:inst35|              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst35                                    ; work         ;
+;       |busmux:SELECTOR|                 ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|busmux:SELECTOR                                                        ; work         ;
+;          |lpm_mux:$00000|               ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|busmux:SELECTOR|lpm_mux:$00000                                         ; work         ;
+;             |mux_omc:auto_generated|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|Block1:inst|busmux:SELECTOR|lpm_mux:$00000|mux_omc:auto_generated                  ; work         ;
+;    |NextState:inst4|                    ; 8 (8)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FULL|NextState:inst4                                                                    ; work         ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++-------------------------------------------------------+---------------------------------------------+
+; Register name                                         ; Reason for Removal                          ;
++-------------------------------------------------------+---------------------------------------------+
+; Block1:inst|Block3:REGISTERFILE|Register:inst36|inst3 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst36|inst2 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst36|inst1 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst36|inst  ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst30|inst3 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst30|inst2 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst30|inst1 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst30|inst  ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst29|inst3 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst29|inst2 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst29|inst1 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst29|inst  ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst28|inst3 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst28|inst2 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst28|inst1 ; Stuck at GND due to stuck port clock_enable ;
+; Block1:inst|Block3:REGISTERFILE|Register:inst28|inst  ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 16                ;                                             ;
++-------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 19    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FULL|Block1:inst|ALU:inst|busmux:inst5|lpm_mux:$00000|mux_omc:auto_generated|result_node[3] ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1|Mux1                                    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |FULL|Block1:inst|Block3:REGISTERFILE|mux81_4b:inst35|Mux1                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst|ALU:inst|BUSMUX:inst5 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                               ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst|ALU:inst|BUSMUX:inst3 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                               ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst|ALU:inst|BUSMUX:inst4 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                               ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2 ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                                          ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst|Block3:REGISTERFILE|BUSMUX:inst3 ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                                          ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst|BUSMUX:SELECTOR ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                         ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Dec 19 14:02:01 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Register -c Register
+Info: Found 1 design units, including 1 entities, in source file Register.bdf
+    Info: Found entity 1: Register
+Info: Found 1 design units, including 1 entities, in source file Block3.bdf
+    Info: Found entity 1: Block3
+Warning: Can't analyze file -- file E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/Block2.bdf is missing
+Warning: Can't analyze file -- file E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/mux2_1.v is missing
+Info: Found 1 design units, including 1 entities, in source file Block1.bdf
+    Info: Found entity 1: Block1
+Warning: Can't analyze file -- file E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/2REG.bdf is missing
+Warning: Can't analyze file -- file E:/1DATA/Slide/HK5/TKLLS/TH/Datapath/2REG_IN/mux21_4b.v is missing
+Info: Found 1 design units, including 1 entities, in source file HA.bdf
+    Info: Found entity 1: HA
+Info: Found 1 design units, including 1 entities, in source file FA.bdf
+    Info: Found entity 1: FA
+Info: Found 1 design units, including 1 entities, in source file SUB.bdf
+    Info: Found entity 1: SUB
+Info: Found 1 design units, including 1 entities, in source file DEC.bdf
+    Info: Found entity 1: DEC
+Info: Found 1 design units, including 1 entities, in source file ALU.bdf
+    Info: Found entity 1: ALU
+Info: Found 1 design units, including 1 entities, in source file NextState.bdf
+    Info: Found entity 1: NextState
+Info: Found 1 design units, including 1 entities, in source file FULL.bdf
+    Info: Found entity 1: FULL
+Info: Found 1 design units, including 1 entities, in source file merge3to1.v
+    Info: Found entity 1: merge3to1
+Info: Elaborating entity "FULL" for the top level hierarchy
+Info: Elaborating entity "NextState" for hierarchy "NextState:inst4"
+Info: Elaborating entity "merge3to1" for hierarchy "NextState:inst4|merge3to1:READA"
+Info: Elaborating entity "Block1" for hierarchy "Block1:inst"
+Info: Elaborating entity "ALU" for hierarchy "Block1:inst|ALU:inst"
+Warning: Using design file split.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: split
+Info: Elaborating entity "split" for hierarchy "Block1:inst|ALU:inst|split:inst6"
+Info: Elaborating entity "BUSMUX" for hierarchy "Block1:inst|ALU:inst|BUSMUX:inst5"
+Info: Elaborated megafunction instantiation "Block1:inst|ALU:inst|BUSMUX:inst5"
+Info: Instantiated megafunction "Block1:inst|ALU:inst|BUSMUX:inst5" with the following parameter:
+    Info: Parameter "WIDTH" = "4"
+Info: Elaborating entity "lpm_mux" for hierarchy "Block1:inst|ALU:inst|BUSMUX:inst5|lpm_mux:$00000"
+Info: Elaborated megafunction instantiation "Block1:inst|ALU:inst|BUSMUX:inst5|lpm_mux:$00000", which is child of megafunction instantiation "Block1:inst|ALU:inst|BUSMUX:inst5"
+Info: Found 1 design units, including 1 entities, in source file db/mux_omc.tdf
+    Info: Found entity 1: mux_omc
+Info: Elaborating entity "mux_omc" for hierarchy "Block1:inst|ALU:inst|BUSMUX:inst5|lpm_mux:$00000|mux_omc:auto_generated"
+Info: Elaborating entity "DEC" for hierarchy "Block1:inst|ALU:inst|DEC:inst2"
+Info: Elaborating entity "HA" for hierarchy "Block1:inst|ALU:inst|DEC:inst2|HA:inst"
+Warning: Using design file merge.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: merge
+Info: Elaborating entity "merge" for hierarchy "Block1:inst|ALU:inst|DEC:inst2|merge:inst5"
+Info: Elaborating entity "FA" for hierarchy "Block1:inst|ALU:inst|FA:inst"
+Info: Elaborating entity "BUSMUX" for hierarchy "Block1:inst|ALU:inst|BUSMUX:inst4"
+Info: Elaborated megafunction instantiation "Block1:inst|ALU:inst|BUSMUX:inst4"
+Info: Instantiated megafunction "Block1:inst|ALU:inst|BUSMUX:inst4" with the following parameter:
+    Info: Parameter "WIDTH" = "4"
+Info: Elaborating entity "SUB" for hierarchy "Block1:inst|ALU:inst|SUB:inst1"
+Info: Elaborating entity "Block3" for hierarchy "Block1:inst|Block3:REGISTERFILE"
+Info: Elaborating entity "BUSMUX" for hierarchy "Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2"
+Info: Elaborated megafunction instantiation "Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2"
+Info: Instantiated megafunction "Block1:inst|Block3:REGISTERFILE|BUSMUX:inst2" with the following parameter:
+    Info: Parameter "WIDTH" = "4"
+Warning: Using design file mux81_4b.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: mux81_4b
+Info: Elaborating entity "mux81_4b" for hierarchy "Block1:inst|Block3:REGISTERFILE|mux81_4b:inst1"
+Info: Elaborating entity "Register" for hierarchy "Block1:inst|Block3:REGISTERFILE|Register:inst"
+Warning: Using design file decoder38.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: decoder38
+Info: Elaborating entity "decoder38" for hierarchy "Block1:inst|Block3:REGISTERFILE|decoder38:inst31"
+Info: Implemented 83 device resources after synthesis - the final resource count might be different
+    Info: Implemented 6 input pins
+    Info: Implemented 5 output pins
+    Info: Implemented 72 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 256 megabytes
+    Info: Processing ended: Wed Dec 19 14:02:03 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

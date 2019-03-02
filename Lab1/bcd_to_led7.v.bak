@@ -1,0 +1,46 @@
+module bcd_to_led7(bcd_3, bcd_2, bcd_1, bcd_0, hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0);
+input  bcd_3, bcd_2, bcd_1, bcd_0;
+output hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0;
+
+wire bcd_3, bcd_2, bcd_1, bcd_0;
+reg  hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0;
+
+always @(bcd_3, bcd_2, bcd_1, bcd_0) begin
+  case({bcd_3, bcd_2, bcd_1, bcd_0})
+    4'd0: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b100_0000;
+	 end
+    4'd1: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b111_1001;
+	 end
+    4'd2: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b010_0100;
+	 end
+    4'd3: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b011_0000;
+	 end
+    4'd4: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b001_1001;
+	 end
+    4'd5: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b001_0000;
+	 end
+    4'd6: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b000_0010;
+	 end
+    4'd7: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b111_1000;
+	 end	
+    4'd8: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b000_0000;
+	 end
+    4'd9: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b000_1000;
+	 end 
+	 default: begin
+	   {hex_6, hex_5, hex_4, hex_3, hex_2, hex_1, hex_0} = 7'b111_1111;
+	 end
+  endcase
+end
+
+endmodule
